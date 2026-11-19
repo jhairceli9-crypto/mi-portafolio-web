@@ -23,8 +23,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&display=swap" rel="stylesheet">
 
-  <!-- ?v=3 = versión de los archivos: súbela (v=2, v=3…) cada vez que publiques cambios en CSS o JS -->
-  <link rel="stylesheet" href="styles.css?v=3">
+  <!-- ?v=4 = versión de los archivos: súbela (v=2, v=3…) cada vez que publiques cambios en CSS o JS -->
+  <link rel="stylesheet" href="styles.css?v=4">
   <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
@@ -49,7 +49,8 @@
           <li><a href="#sobre-mi" class="nav__link">Sobre mí</a></li>
           <li><a href="#servicios" class="nav__link">Servicios</a></li>
           <li><a href="#proyectos" class="nav__link">Proyectos</a></li>
-          <li><a href="#proceso" class="nav__link">Proceso</a></li>
+          <li><a href="#como-trabajamos" class="nav__link">Cómo trabajamos</a></li>
+          <li><a href="#preguntas" class="nav__link">Preguntas</a></li>
           <li><a href="#contacto" class="nav__link">Contacto</a></li>
         </ul>
         <a href="#contacto" class="btn btn--primary btn--sm nav__cta">Solicitar información</a>
@@ -116,41 +117,70 @@
       </div>
     </section>
 
-    <!-- ===== 3. SERVICIOS ===== -->
+    <!-- ===== 3. SERVICIOS =====
+         Cada tarjeta: título, descripción, beneficios y botón. El botón abre WhatsApp con el
+         nombre del servicio (data-service) si el número está configurado en script.js. -->
     <section class="section section--alt" id="servicios" aria-labelledby="servicios-title">
       <div class="container">
         <header class="section__head reveal">
           <p class="eyebrow">Servicios</p>
-          <h2 class="section__title" id="servicios-title">¿En qué te puedo ayudar?</h2>
-          <p class="section__text">Servicios pensados para negocios que necesitan una página clara, moderna y fácil de visitar desde el celular.</p>
+          <h2 class="section__title" id="servicios-title">Servicios para tu negocio</h2>
+          <p class="section__text">Elige lo que necesitas hoy. Antes de empezar te explico cada opción con claridad, sin tecnicismos.</p>
         </header>
 
         <div class="cards">
           <article class="card reveal">
             <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 13h8M8 16h5"/></svg></span>
-            <h3 class="card__title">Páginas web informativas</h3>
-            <p>Una página para presentar tu negocio: quién eres, qué ofreces, horarios y cómo contactarte.</p>
+            <h3 class="card__title">Página web informativa</h3>
+            <p>Una página para presentar tu negocio en Internet: quién eres, qué ofreces y cómo contactarte.</p>
+            <ul class="card__benefits" aria-label="Beneficios">
+              <li>Tu información en un solo enlace, fácil de compartir</li>
+              <li>Se ve bien en celulares, tablets y computadoras</li>
+              <li>Botón directo para que te escriban por WhatsApp</li>
+            </ul>
+            <a class="card__cta" href="#contacto" data-service="página web informativa">Consultar este servicio<span class="sr-only">: página web informativa</span> <span aria-hidden="true">→</span></a>
           </article>
+
           <article class="card reveal">
             <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3v8a3 3 0 0 0 3 3v7M7 3v5M10 3v5M13 3v5"/><path d="M17 3c-1.7 1.5-2.5 3.5-2.5 6s1 3 2.5 3v9"/></svg></span>
-            <h3 class="card__title">Páginas para restaurantes y menús digitales</h3>
-            <p>Menú con fotos, precios y categorías, más horarios y un botón para hacer consultas por WhatsApp.</p>
+            <h3 class="card__title">Menú digital para restaurantes</h3>
+            <p>Tu carta en línea con fotos, precios y categorías, más horarios y ubicación.</p>
+            <ul class="card__benefits" aria-label="Beneficios">
+              <li>Tus clientes revisan el menú desde el celular</li>
+              <li>Platos y precios organizados por categorías</li>
+              <li>Cambiar un precio no obliga a reimprimir la carta</li>
+            </ul>
+            <a class="card__cta" href="#contacto" data-service="menú digital">Consultar este servicio<span class="sr-only">: menú digital</span> <span aria-hidden="true">→</span></a>
           </article>
+
           <article class="card reveal">
             <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>
-            <h3 class="card__title">Catálogos web para negocios</h3>
-            <p>Productos organizados por categorías, con buscador y fotos, para que tus clientes vean lo que ofreces.</p>
+            <h3 class="card__title">Catálogo web de productos</h3>
+            <p>Tus productos con foto, descripción y categorías, para mostrar lo que vendes en un solo lugar.</p>
+            <ul class="card__benefits" aria-label="Beneficios">
+              <li>Productos ordenados y fáciles de encontrar</li>
+              <li>Buscador y filtros por categoría</li>
+              <li>Consultas por WhatsApp sobre cada producto</li>
+            </ul>
+            <a class="card__cta" href="#contacto" data-service="catálogo web">Consultar este servicio<span class="sr-only">: catálogo web</span> <span aria-hidden="true">→</span></a>
           </article>
+
           <article class="card reveal">
             <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4 2.5-2.5z"/></svg></span>
-            <h3 class="card__title">Actualización y mantenimiento básico</h3>
-            <p>Cambiar textos, fotos, precios u horarios de una página existente y revisar que se vea bien en celulares.</p>
+            <h3 class="card__title">Mantenimiento básico</h3>
+            <p>Cambios sencillos en una página que ya existe, para que tu información siga al día.</p>
+            <ul class="card__benefits" aria-label="Beneficios">
+              <li>Actualizar textos, fotos, precios u horarios</li>
+              <li>Revisar que se vea bien en celulares</li>
+              <li>Corregir enlaces o botones que no funcionan</li>
+            </ul>
+            <a class="card__cta" href="#contacto" data-service="mantenimiento básico">Consultar este servicio<span class="sr-only">: mantenimiento básico</span> <span aria-hidden="true">→</span></a>
           </article>
         </div>
 
         <p class="honest-note reveal">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
-          <span><strong>Para ser claro:</strong> por ahora no desarrollo tiendas con pagos en línea, sistemas con base de datos ni áreas con usuario y contraseña.</span>
+          <span><strong>Para ser claro:</strong> por ahora no desarrollo tiendas con pagos en línea, sistemas con base de datos ni áreas con usuario y contraseña. Una página web ayuda a presentar tu negocio, pero no garantiza ventas.</span>
         </p>
       </div>
     </section>
@@ -162,8 +192,8 @@
       <div class="container">
         <header class="section__head reveal">
           <p class="eyebrow">Proyectos</p>
-          <h2 class="section__title" id="proyectos-title">Proyectos de práctica publicados</h2>
-          <p class="section__text">Tres sitios reales que puedes abrir y probar. Las capturas son de las páginas publicadas.</p>
+          <h2 class="section__title" id="proyectos-title">Proyectos de práctica</h2>
+          <p class="section__text">Tres sitios de demostración publicados que puedes abrir y probar. Las capturas son reales.</p>
         </header>
 
         <div class="projects">
@@ -256,48 +286,103 @@
       </div>
     </section>
 
-    <!-- ===== 5. PROCESO DE TRABAJO ===== -->
-    <section class="section section--alt" id="proceso" aria-labelledby="proceso-title">
+    <!-- ===== Llamada a la acción ===== -->
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-band__box reveal">
+          <div>
+            <h2 class="cta-band__title" id="cta-title">¿Te gustaría una página así para tu negocio?</h2>
+            <p>Cuéntame qué necesitas y te preparo una propuesta clara, sin compromiso.</p>
+          </div>
+          <div class="cta-band__actions">
+            <a class="btn btn--light btn--lg" href="#contacto" data-wa>Escribirme por WhatsApp</a>
+            <a class="btn btn--outline-light btn--lg" href="#servicios">Ver servicios</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. CÓMO TRABAJAMOS ===== -->
+    <section class="section" id="como-trabajamos" aria-labelledby="proceso-title">
       <div class="container">
         <header class="section__head reveal">
-          <p class="eyebrow">Proceso de trabajo</p>
+          <p class="eyebrow">Cómo trabajamos</p>
           <h2 class="section__title" id="proceso-title">Cuatro pasos, sin complicaciones</h2>
+          <p class="section__text">Siempre sabrás en qué etapa está tu página y qué necesito de ti.</p>
         </header>
 
         <ol class="steps">
           <li class="step reveal">
             <span class="step__num" aria-hidden="true">1</span>
-            <h3 class="step__title">Conocer las necesidades</h3>
-            <p>Conversamos sobre tu negocio, tus clientes y lo que quieres mostrar en la página.</p>
+            <h3 class="step__title">Conocer tu negocio</h3>
+            <p>Conversamos sobre lo que vendes, a quién y qué quieres mostrar en la página.</p>
           </li>
           <li class="step reveal">
             <span class="step__num" aria-hidden="true">2</span>
-            <h3 class="step__title">Preparar una propuesta</h3>
-            <p>Te explico qué secciones tendrá la página, qué necesito de ti (textos y fotos) y los tiempos.</p>
+            <h3 class="step__title">Preparar la propuesta</h3>
+            <p>Te envío las secciones, lo que necesito de ti (textos, fotos, logo), el plazo estimado y el precio.</p>
           </li>
           <li class="step reveal">
             <span class="step__num" aria-hidden="true">3</span>
             <h3 class="step__title">Diseñar y desarrollar</h3>
-            <p>Construyo la página y te muestro avances para que puedas opinar y pedir cambios.</p>
+            <p>Construyo la página y te muestro avances para que opines y pidas ajustes.</p>
           </li>
           <li class="step reveal">
             <span class="step__num" aria-hidden="true">4</span>
-            <h3 class="step__title">Revisar y entregar</h3>
-            <p>Probamos juntos en celular y computadora, ajustamos detalles y la publico en Internet.</p>
+            <h3 class="step__title">Revisar y publicar</h3>
+            <p>La probamos juntos en celular y computadora y la publico en Internet.</p>
           </li>
         </ol>
       </div>
     </section>
 
-    <!-- ===== 6. CONTACTO =====
+    <!-- ===== 6. PREGUNTAS FRECUENTES =====
+         Cada pregunta es un <details>: se abre y se cierra sin JavaScript y funciona con teclado. -->
+    <section class="section section--alt" id="preguntas" aria-labelledby="faq-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Preguntas frecuentes</p>
+          <h2 class="section__title" id="faq-title">Resolvemos tus dudas</h2>
+        </header>
+
+        <div class="faq reveal">
+          <details class="faq__item">
+            <summary>¿Cuánto tiempo tarda una página?</summary>
+            <p>Depende de cuántas secciones tenga y de cuándo estén listos tus textos y fotos. En la propuesta te doy un plazo estimado antes de empezar, para que sepas qué esperar.</p>
+          </details>
+          <details class="faq__item">
+            <summary>¿Puedo pedir cambios?</summary>
+            <p>Sí. Durante el desarrollo te muestro avances para que pidas ajustes. En la propuesta acordamos cuántas rondas de cambios incluye y cómo se manejan los cambios posteriores.</p>
+          </details>
+          <details class="faq__item">
+            <summary>¿Cómo se publica la página en Internet?</summary>
+            <p>Puedo publicarla en servicios gratuitos como GitHub Pages o Netlify, con una dirección como <em>tunegocio.netlify.app</em>. Si prefieres un dominio propio (por ejemplo <em>tunegocio.com</em>), tiene un costo anual del proveedor y conviene que quede registrado a tu nombre.</p>
+          </details>
+          <details class="faq__item">
+            <summary>¿Qué necesito tener listo?</summary>
+            <p>Información de tu negocio (qué ofreces, horarios, ubicación, contacto), tus fotos y tu logo si lo tienes. Si te falta algo, te ayudo a organizarlo.</p>
+          </details>
+          <details class="faq__item">
+            <summary>¿Podré actualizar la página después?</summary>
+            <p>Sí. Te explico cómo cambiar lo básico, o puedo encargarme de los cambios con el servicio de mantenimiento.</p>
+          </details>
+          <details class="faq__item">
+            <summary>¿Cuánto cuesta?</summary>
+            <p>Depende de las secciones y funciones que necesites. Te envío una propuesta con el precio antes de empezar, sin compromiso.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 7. CONTACTO =====
          Los datos de contacto se configuran en script.js (CONFIG). Si faltan, se muestran como pendientes. -->
     <section class="section" id="contacto" aria-labelledby="contacto-title">
       <div class="container">
         <div class="contact reveal">
           <div class="contact__intro">
             <p class="eyebrow">Contacto</p>
-            <h2 class="section__title" id="contacto-title">¿Tienes un negocio y quieres tu página web?</h2>
-            <p>Escríbeme y cuéntame qué necesitas. Te responderé con una propuesta clara y sin compromiso.</p>
+            <h2 class="section__title" id="contacto-title">Hablemos de tu página web</h2>
+            <p>Escríbeme y cuéntame a qué se dedica tu negocio y qué te gustaría mostrar. Te respondo personalmente con una propuesta clara y sin compromiso.</p>
           </div>
 
           <ul class="channels">
@@ -329,7 +414,7 @@
     </section>
   </main>
 
-  <!-- ===== 7. PIE DE PÁGINA ===== -->
+  <!-- ===== 8. PIE DE PÁGINA ===== -->
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
@@ -343,7 +428,8 @@
         <a href="#sobre-mi">Sobre mí</a>
         <a href="#servicios">Servicios</a>
         <a href="#proyectos">Proyectos</a>
-        <a href="#proceso">Proceso</a>
+        <a href="#como-trabajamos">Cómo trabajamos</a>
+        <a href="#preguntas">Preguntas frecuentes</a>
         <a href="#contacto">Contacto</a>
         <a data-github href="https://github.com/jhairceli9-crypto" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (se abre en una pestaña nueva)</span> <span aria-hidden="true">↗</span></a>
       </nav>
@@ -353,6 +439,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=3" defer></script>
+  <script src="script.js?v=4" defer></script>
 </body>
 </html>

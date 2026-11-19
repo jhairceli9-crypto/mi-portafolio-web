@@ -13,8 +13,8 @@
    y NO crea enlaces falsos ni simula mensajes enviados. */
 const CONFIG = {
   brandName: "Jhair Ivan Celi",
-  whatsappNumber: "",
-  email: "",
+  whatsappNumber: "593991849364",   // +593 99 184 9364 (sin el 0 inicial del formato nacional)
+  email: "celijhair16@gmail.com",
   githubUser: "jhairceli9-crypto",
   whatsappMessage: "Hola, vi tu portafolio y quisiera información sobre una página web.",
   emailSubject: "Consulta sobre una página web",
@@ -83,6 +83,32 @@ document.addEventListener("DOMContentLoaded", () => {
     setChannel("channelEmail", `mailto:${email}?subject=${encodeURIComponent(CONFIG.emailSubject)}`,
       email, " (abre tu programa de correo)");
   }
+  /**
+   * Botones de llamada a la acción:
+   * - [data-service] → "Consultar este servicio": WhatsApp con el nombre del servicio ya escrito.
+   * - [data-wa]      → botón general "Escribirme por WhatsApp".
+   * Sin número válido, se quedan como enlaces a la sección #contacto (nunca a un WhatsApp falso).
+   */
+  const waLink = (text) => `https://wa.me/${wa}?text=${encodeURIComponent(text)}`;
+  const makeWhatsApp = (a, text) => {
+    a.href = waLink(text);
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+    a.append(el("span", "sr-only", " (abre WhatsApp en una pestaña nueva)"));
+  };
+  if (wa) {
+    document.querySelectorAll("[data-service]").forEach((a) =>
+      makeWhatsApp(a, `Hola, vi tu portafolio y me interesa el servicio de ${a.dataset.service}.`));
+    document.querySelectorAll("[data-wa]").forEach((a) => makeWhatsApp(a, CONFIG.whatsappMessage));
+
+    // Botón flotante de WhatsApp (solo existe si hay número)
+    const float = el("a", "wa-float");
+    makeWhatsApp(float, CONFIG.whatsappMessage);
+    float.setAttribute("aria-label", "Escribirme por WhatsApp (se abre en una pestaña nueva)");
+    float.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 0 1-11.8 7L4 20l1.1-4A8 8 0 1 1 20 12z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 .8c-.9-.4-1.6-1.1-2-2l.8-1-1-2L9 9.5z"/></svg>';
+    document.body.append(float);
+  }
+
   // Enlaces de GitHub (logo del pie y contacto) con el usuario configurado
   document.querySelectorAll("[data-github]").forEach((a) => { a.href = `https://github.com/${CONFIG.githubUser}`; });
 
@@ -91,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const nav = document.getElementById("nav");
   const toggle = document.getElementById("navToggle");
   const navItems = nav.querySelectorAll("a");
-  const mobileQuery = window.matchMedia("(max-width: 900px)"); // igual que en styles.css
+  const mobileQuery = window.matchMedia("(max-width: 1080px)"); // igual que en styles.css
 
   const backdrop = el("div", "nav-backdrop");
   document.body.append(backdrop);

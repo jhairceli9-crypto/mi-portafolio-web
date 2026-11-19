@@ -10,10 +10,12 @@ Portafolio personal de un desarrollador web en formación. Muestra proyectos rea
 |---|---|
 | Inicio | Título, subtítulo, botones «Ver mis proyectos» y «Solicitar información», y capturas reales de los proyectos. |
 | Sobre mí | Presentación honesta como desarrollador en formación y habilidades que ya se practican en los proyectos. |
-| Servicios | 4 servicios y una nota clara de lo que **todavía no** se ofrece (pagos en línea, bases de datos, inicio de sesión). |
+| Servicios | 4 servicios (web informativa, menú digital, catálogo y mantenimiento) con beneficios y botón «Consultar este servicio», más una nota de lo que **todavía no** se ofrece y de que una web no garantiza ventas. |
 | Proyectos | NovaTech Solutions, Sabor & Brasa y Botiquín del Barrio, con captura real, descripción, funciones, tecnologías verificadas y botón «Ver proyecto». |
-| Proceso | 4 pasos de trabajo. |
-| Contacto | WhatsApp y correo configurables, más el enlace a GitHub. |
+| Llamada a la acción | Banda «¿Te gustaría una página así para tu negocio?» con botón de WhatsApp. |
+| Cómo trabajamos | 4 pasos: conocer el negocio, propuesta, desarrollo y publicación. |
+| Preguntas frecuentes | Plazos, cambios, publicación, qué tener listo, actualizaciones y precio (sin cifras inventadas). |
+| Contacto | WhatsApp y correo configurados, enlace a GitHub y botón flotante de WhatsApp. |
 | Pie | Navegación, GitHub y aviso de portafolio personal. |
 
 ## Archivos
@@ -32,8 +34,8 @@ Portafolio personal de un desarrollador web en formación. Muestra proyectos rea
 ```js
 const CONFIG = {
   brandName: "Jhair Ivan Celi",     // nombre comercial: logo, pie y título de la pestaña
-  whatsappNumber: "",               // tu número real, con código de país (8 a 15 dígitos)
-  email: "",                        // tu correo real
+  whatsappNumber: "593991849364",   // número real con código de país, sin el 0 inicial
+  email: "celijhair16@gmail.com",   // correo real
   githubUser: "jhairceli9-crypto",  // tu usuario de GitHub
   whatsappMessage: "Hola, vi tu portafolio y quisiera información sobre una página web.",
   emailSubject: "Consulta sobre una página web",
@@ -42,14 +44,16 @@ const CONFIG = {
 
 | Dato | Si está vacío o es inválido | Si es válido |
 |---|---|---|
-| `whatsappNumber` | Se muestra «Pendiente de configurar»; no hay enlace. | Botón «Escribirme por WhatsApp» que abre `wa.me` con el mensaje inicial. |
+| `whatsappNumber` | Se muestra «Pendiente de configurar»; los botones llevan a #contacto y no hay botón flotante. | Todos los botones de WhatsApp (servicios con su nombre, banda azul, contacto y botón flotante) abren `wa.me` con el mensaje. |
 | `email` | Se muestra «Pendiente de configurar»; no hay enlace. | Enlace `mailto:` con asunto. |
 
-El número se puede escribir con `+`, espacios o guiones. Los datos inválidos generan un aviso en la consola (`F12`).
+El número se puede escribir con `+`, espacios o guiones. **Formato de Ecuador:** 593 + el número sin el 0 inicial (099… → 59399…). Los datos inválidos generan un aviso en la consola (`F12`).
 
 ## Cómo editar el contenido
 
 - **Textos:** directamente en `index.html`; cada sección tiene un comentario `===== N. NOMBRE =====`.
+- **Preguntas frecuentes:** copia un bloque `<details class="faq__item">` y cambia la pregunta (`<summary>`) y la respuesta (`<p>`).
+- **Servicio nuevo:** copia un `<article class="card">` y pon el nombre del servicio en `data-service="…"` (es el texto que aparece en el mensaje de WhatsApp).
 - **Colores:** variables al inicio de `styles.css` (`--bg`, `--blue`, `--sky`…). Junto a cada una está su uso.
 - **Agregar un proyecto** (cada tarjeta lleva 3 capturas reales):
   1. **Captura de escritorio:** abre el sitio en Chrome con la ventana en 1280 × 800 y toma la captura (`F12` → `Ctrl + Shift + P` → «Capture screenshot»).
@@ -83,7 +87,7 @@ En Chrome: `F12` → `Ctrl + Shift + M` para ver el formato de celular.
    <link rel="canonical" href="https://TU-USUARIO.github.io/mi-portafolio-web/">
    ```
    (Deben ser direcciones completas; por eso no se incluyeron todavía).
-4. Cada vez que cambies `styles.css` o `script.js`, sube la versión en `index.html` (`?v=3` → `?v=4`).
+4. Cada vez que cambies `styles.css` o `script.js`, sube la versión en `index.html` (`?v=4` → `?v=5`).
 
 ## Calidad comprobada
 
@@ -99,7 +103,7 @@ Probado en Chrome de escritorio, con anchos simulados y servido en una subruta c
 
 ## Limitaciones
 
-- WhatsApp y correo quedan **pendientes** hasta que configures datos reales.
+- Al publicar, **tu número de WhatsApp y tu correo serán visibles** para cualquier visitante.
 - Las capturas son una foto del momento: si cambias un proyecto, vuelve a tomarlas.
 - La fuente Manrope se carga desde Google Fonts.
 - No probado todavía en celulares físicos, Safari en iPhone ni con lectores de pantalla.
