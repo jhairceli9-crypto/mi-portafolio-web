@@ -108,7 +108,8 @@ document.addEventListener("DOMContentLoaded", () => {
   /**
    * Botones de llamada a la acción:
    * - [data-service] → "Consultar este servicio": WhatsApp con el nombre del servicio ya escrito.
-   * - [data-wa]      → botón general "Escribirme por WhatsApp".
+   * - [data-wa]      → botón general "Solicitar cotización por WhatsApp".
+   * - [data-plan]    → botones "Solicitar cotización" de cada plan.
    * Sin número válido, se quedan como enlaces a la sección #contacto (nunca a un WhatsApp falso).
    */
   const waLink = (text) => `https://wa.me/${wa}?text=${encodeURIComponent(text)}`;
@@ -116,12 +117,16 @@ document.addEventListener("DOMContentLoaded", () => {
     a.href = waLink(text);
     a.target = "_blank";
     a.rel = "noopener noreferrer";
-    a.append(el("span", "sr-only", " (abre WhatsApp en una pestaña nueva)"));
+    // Aviso para lectores de pantalla, solo si el botón no lo trae ya escrito en el HTML
+    if (!a.querySelector(".sr-only")) a.append(el("span", "sr-only", " (abre WhatsApp en una pestaña nueva)"));
   };
   if (wa) {
     document.querySelectorAll("[data-service]").forEach((a) =>
       makeWhatsApp(a, `Hola, vi tu portafolio y me interesa el servicio de ${a.dataset.service}.`));
     document.querySelectorAll("[data-wa]").forEach((a) => makeWhatsApp(a, CONFIG.whatsappMessage));
+    // Botones de los planes: "Hola, … quiero cotizar el Plan Emprendedor."
+    document.querySelectorAll("[data-plan]").forEach((a) =>
+      makeWhatsApp(a, `Hola, vi tu portafolio y quiero cotizar el Plan ${a.dataset.plan}.`));
 
     // Botón flotante de WhatsApp (solo existe si hay número)
     const float = el("a", "wa-float");
@@ -129,6 +134,10 @@ document.addEventListener("DOMContentLoaded", () => {
     float.setAttribute("aria-label", "Escribirme por WhatsApp (se abre en una pestaña nueva)");
     float.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 0 1-11.8 7L4 20l1.1-4A8 8 0 1 1 20 12z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 .8c-.9-.4-1.6-1.1-2-2l.8-1-1-2L9 9.5z"/></svg>';
     document.body.append(float);
+  } else {
+    // Sin número válido: se quitan los botones de WhatsApp escritos en el HTML (podrían estar desactualizados);
+    // el canal de contacto ya muestra el mensaje "no disponible".
+    document.querySelectorAll('[data-wa][href^="https://wa.me"]').forEach((a) => a.remove());
   }
 
   // Enlaces de GitHub (logo del pie y contacto) con el usuario configurado
@@ -139,7 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const nav = document.getElementById("nav");
   const toggle = document.getElementById("navToggle");
   const navItems = nav.querySelectorAll("a");
-  const mobileQuery = window.matchMedia("(max-width: 1080px)"); // igual que en styles.css
+  const mobileQuery = window.matchMedia("(max-width: 900px)"); // igual que en styles.css
 
   const backdrop = el("div", "nav-backdrop");
   document.body.append(backdrop);

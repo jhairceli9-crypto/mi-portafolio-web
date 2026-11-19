@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- El nombre del portafolio se cambia en script.js (CONFIG.brandName); este título es el valor por defecto -->
   <title>Jhair Ivan Celi | Páginas web para negocios y emprendedores</title>
-  <meta name="description" content="Desarrollador web en formación: páginas informativas, menús digitales y catálogos modernos, rápidos y adaptados a celulares. Mira mis proyectos.">
-  <meta name="theme-color" content="#0B1120">
+  <meta name="description" content="Diseño y desarrollo páginas web modernas para emprendedores y negocios de Ecuador. Mira proyectos demostrativos y precios de lanzamiento desde $25.">
+  <meta name="theme-color" content="#080D1A">
   <meta name="color-scheme" content="dark">
 
   <!-- Vista previa al compartir el enlace (WhatsApp, redes) -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Jhair Ivan Celi — Páginas web para negocios">
-  <meta property="og:description" content="Sitios modernos, rápidos y adaptados a celulares. Mira mis proyectos de práctica.">
+  <meta property="og:title" content="Jhair Ivan Celi — Páginas web profesionales para tu negocio">
+  <meta property="og:description" content="Sitios modernos y adaptados a celulares. Proyectos demostrativos y precios de lanzamiento.">
   <meta property="og:url" content="https://jhairceli9-crypto.github.io/mi-portafolio-web/">
   <meta property="og:image" content="https://jhairceli9-crypto.github.io/mi-portafolio-web/img/sabor-y-brasa-800.webp">
   <meta property="og:image:width" content="800">
@@ -20,15 +20,15 @@
   <link rel="canonical" href="https://jhairceli9-crypto.github.io/mi-portafolio-web/">
   <meta property="og:locale" content="es_EC">
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232563EB'/%3E%3Cpath d='M12 11l-5 5 5 5M20 11l5 5-5 5' fill='none' stroke='%23fff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%233B82F6'/%3E%3Cpath d='M12 11l-5 5 5 5M20 11l5 5-5 5' fill='none' stroke='%23080D1A' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 
-  <!-- Una sola fuente variable (Manrope): una descarga para todos los pesos -->
+  <!-- Una sola fuente variable (Inter): una descarga para todos los pesos -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap" rel="stylesheet">
 
-  <!-- ?v=6 = versión de los archivos: súbela (v=2, v=3…) cada vez que publiques cambios en CSS o JS -->
-  <link rel="stylesheet" href="styles.css?v=6">
+  <!-- ?v=8 = versión de los archivos: súbela (v=9, v=10…) cada vez que publiques cambios en CSS o JS -->
+  <link rel="stylesheet" href="styles.css?v=8">
   <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
@@ -50,14 +50,13 @@
 
       <nav class="nav" id="nav" aria-label="Principal">
         <ul class="nav__list">
-          <li><a href="#sobre-mi" class="nav__link">Sobre mí</a></li>
+          <li><a href="#inicio" class="nav__link">Inicio</a></li>
           <li><a href="#servicios" class="nav__link">Servicios</a></li>
           <li><a href="#proyectos" class="nav__link">Proyectos</a></li>
-          <li><a href="#como-trabajamos" class="nav__link">Cómo trabajamos</a></li>
-          <li><a href="#preguntas" class="nav__link">Preguntas</a></li>
+          <li><a href="#precios" class="nav__link">Precios</a></li>
           <li><a href="#contacto" class="nav__link">Contacto</a></li>
         </ul>
-        <a href="#contacto" class="btn btn--primary btn--sm nav__cta">Solicitar información</a>
+        <a href="#contacto" class="btn btn--primary btn--sm nav__cta">Cotizar</a>
       </nav>
     </div>
   </header>
@@ -66,39 +65,330 @@
 
     <!-- ===== 1. INICIO ===== -->
     <section class="hero" id="inicio" aria-labelledby="hero-title">
-      <div class="hero__bg" aria-hidden="true"></div>
+      <!-- Decoración: degradado radial suave + figuras geométricas hechas con CSS (no son contenido) -->
+      <div class="hero__bg" aria-hidden="true">
+        <span class="geo geo--ring"></span>
+        <span class="geo geo--ring geo--ring-sm"></span>
+        <span class="geo geo--grid"></span>
+      </div>
+
       <div class="container hero__inner">
         <div class="hero__content">
-          <p class="badge reveal"><span class="badge__dot" aria-hidden="true"></span>Desarrollador web en formación</p>
-          <h1 class="hero__title reveal" id="hero-title">Diseño páginas web que ayudan a <span class="accent">presentar tu negocio</span> en Internet</h1>
-          <p class="hero__text reveal">Creo sitios modernos, rápidos y adaptados a celulares para negocios y emprendedores.</p>
+          <p class="badge reveal"><span class="badge__dot" aria-hidden="true"></span>Desarrollo web para emprendedores en Ecuador</p>
+          <h1 class="hero__title reveal" id="hero-title">Transformo ideas en <span class="accent">páginas web profesionales</span></h1>
+          <p class="hero__text reveal">Diseño y desarrollo sitios web modernos para emprendedores y negocios que quieren mejorar su presencia digital.</p>
           <div class="hero__actions reveal">
             <a href="#proyectos" class="btn btn--primary btn--lg">Ver mis proyectos
               <svg class="btn__icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4"/></svg>
             </a>
-            <a href="#contacto" class="btn btn--ghost btn--lg">Solicitar información</a>
+            <a href="#contacto" class="btn btn--ghost btn--lg">Solicitar cotización</a>
           </div>
+          <ul class="hero__facts reveal" aria-label="Lo que ofrezco">
+            <li>Adaptadas a celulares</li>
+            <li>Contacto por WhatsApp</li>
+            <li>Precios desde $25</li>
+          </ul>
         </div>
 
-        <!-- Vista previa decorativa de los proyectos (las capturas reales también están en "Proyectos") -->
+        <!-- Captura real de un proyecto demostrativo (decorativa: el detalle está en "Proyectos") -->
         <div class="hero__visual reveal" aria-hidden="true">
-          <div class="shot shot--back">
-            <div class="shot__bar"><i></i><i></i><i></i></div>
-            <img src="img/novatech-480.webp" width="480" height="300" alt="" decoding="async">
+          <div class="browser">
+            <div class="browser__bar">
+              <span class="browser__dots"><i></i><i></i><i></i></span>
+              <span class="browser__url">jhairceli9-crypto.github.io/sabor-y-brasa</span>
+            </div>
+            <img src="img/sabor-y-brasa-800.webp" srcset="img/sabor-y-brasa-480.webp 480w, img/sabor-y-brasa-800.webp 800w"
+                 sizes="(max-width: 900px) 92vw, 540px" width="800" height="500" alt="" fetchpriority="high" decoding="async">
           </div>
-          <div class="shot shot--front">
-            <div class="shot__bar"><i></i><i></i><i></i></div>
-            <img src="img/sabor-y-brasa-480.webp" width="480" height="300" alt="" fetchpriority="high" decoding="async">
-          </div>
-          <div class="shot shot--side">
-            <div class="shot__bar"><i></i><i></i><i></i></div>
-            <img src="img/botiquin-480.webp" width="480" height="300" alt="" decoding="async">
-          </div>
+          <img class="hero__phone" src="img/novatech-movil.webp" width="300" height="569" alt="" decoding="async">
         </div>
       </div>
     </section>
 
-    <!-- ===== 2. SOBRE MÍ ===== -->
+    <!-- ===== 2. SERVICIOS =====
+         Cada tarjeta: título, descripción, beneficios y botón. El botón abre WhatsApp con el
+         nombre del servicio (data-service) si el número está configurado en script.js. -->
+    <section class="section" id="servicios" aria-labelledby="servicios-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Servicios</p>
+          <h2 class="section__title" id="servicios-title">Lo que puedo hacer por tu negocio</h2>
+          <p class="section__text">Páginas claras, rápidas y pensadas para que tus clientes te encuentren y te escriban.</p>
+        </header>
+
+        <div class="cards">
+          <article class="card reveal">
+            <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 13h8M8 16h5"/></svg></span>
+            <h3 class="card__title">Páginas web informativas</h3>
+            <p>Presenta tu negocio en Internet: quién eres, qué ofreces y cómo contactarte.</p>
+            <ul class="card__benefits" aria-label="Beneficios">
+              <li>Tu información en un solo enlace</li>
+              <li>Se ve bien en cualquier pantalla</li>
+              <li>Botón directo a WhatsApp</li>
+            </ul>
+            <a class="card__cta" href="#contacto" data-service="páginas web informativas">Consultar<span class="sr-only"> sobre páginas web informativas</span> <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="card reveal">
+            <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3v8a3 3 0 0 0 3 3v7M7 3v5M10 3v5M13 3v5"/><path d="M17 3c-1.7 1.5-2.5 3.5-2.5 6s1 3 2.5 3v9"/></svg></span>
+            <h3 class="card__title">Páginas para restaurantes</h3>
+            <p>Tu carta en línea con fotos, precios y categorías, más horarios y ubicación.</p>
+            <ul class="card__benefits" aria-label="Beneficios">
+              <li>Menú digital desde el celular</li>
+              <li>Platos organizados por categorías</li>
+              <li>Cambiar precios sin reimprimir</li>
+            </ul>
+            <a class="card__cta" href="#contacto" data-service="páginas para restaurantes">Consultar<span class="sr-only"> sobre páginas para restaurantes</span> <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="card reveal">
+            <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>
+            <h3 class="card__title">Catálogos digitales</h3>
+            <p>Tus productos con foto, descripción y precio, organizados en un solo lugar.</p>
+            <ul class="card__benefits" aria-label="Beneficios">
+              <li>Productos fáciles de encontrar</li>
+              <li>Filtros por categoría</li>
+              <li>Consultas por WhatsApp</li>
+            </ul>
+            <a class="card__cta" href="#contacto" data-service="catálogos digitales">Consultar<span class="sr-only"> sobre catálogos digitales</span> <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="card reveal">
+            <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4 2.5-2.5z"/></svg></span>
+            <h3 class="card__title">Mantenimiento web básico</h3>
+            <p>Cambios sencillos en una página que ya existe, para mantener tu información al día.</p>
+            <ul class="card__benefits" aria-label="Beneficios">
+              <li>Textos, fotos, precios y horarios</li>
+              <li>Revisión en celulares</li>
+              <li>Enlaces y botones que funcionen</li>
+            </ul>
+            <a class="card__cta" href="#contacto" data-service="mantenimiento web básico">Consultar<span class="sr-only"> sobre mantenimiento web básico</span> <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. PROYECTOS DESTACADOS =====
+         Tarjetas grandes estilo navegador. Para agregar uno: copia un <article class="project"> completo,
+         pon sus capturas en img/ (800 y 480 px + versión -movil) y cambia textos y enlaces. -->
+    <section class="section section--alt" id="proyectos" aria-labelledby="proyectos-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Proyectos destacados</p>
+          <h2 class="section__title" id="proyectos-title">Proyectos demostrativos</h2>
+          <p class="section__text">Sitios creados para practicar y mostrar lo que puedo hacer. No son trabajos para clientes. Las capturas son reales.</p>
+        </header>
+
+        <div class="projects">
+          <!-- NovaTech Solutions -->
+          <article class="project reveal">
+            <div class="browser project__browser">
+              <div class="browser__bar">
+                <span class="browser__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span class="browser__url" aria-hidden="true">jhairceli9-crypto.github.io/novatech-solutions</span>
+              </div>
+              <figure class="project__media">
+                <img src="img/novatech-800.webp" srcset="img/novatech-480.webp 480w, img/novatech-800.webp 800w"
+                     sizes="(max-width: 900px) 92vw, 620px" width="800" height="500"
+                     alt="Captura de la página de inicio de NovaTech Solutions" loading="lazy" decoding="async">
+                <img class="project__phone" src="img/novatech-movil.webp" width="300" height="569"
+                     alt="Captura de la versión para celular de NovaTech Solutions" loading="lazy" decoding="async">
+              </figure>
+            </div>
+            <div class="project__body">
+              <span class="tag">Demostración · empresa ficticia</span>
+              <h3 class="project__title">NovaTech Solutions</h3>
+              <p class="project__text">Sitio de presentación de servicios tecnológicos para una empresa ficticia.</p>
+              <ul class="project__features">
+                <li>Menú móvil accesible con teclado</li>
+                <li>Sección de proyectos con filtros</li>
+                <li>Formulario demostrativo con validación</li>
+              </ul>
+              <ul class="chips" aria-label="Tecnologías">
+                <li>HTML</li><li>CSS</li><li>JavaScript</li><li>GitHub Pages</li>
+              </ul>
+              <div class="project__actions">
+                <a class="btn btn--primary" href="https://jhairceli9-crypto.github.io/novatech-solutions/" target="_blank" rel="noopener noreferrer">Ver proyecto <span aria-hidden="true">↗</span><span class="sr-only">: NovaTech Solutions (se abre en una pestaña nueva)</span></a>
+                <a class="btn btn--ghost" href="https://github.com/jhairceli9-crypto/novatech-solutions" target="_blank" rel="noopener noreferrer">Código<span class="sr-only"> de NovaTech Solutions en GitHub (se abre en una pestaña nueva)</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Sabor & Brasa -->
+          <article class="project reveal">
+            <div class="browser project__browser">
+              <div class="browser__bar">
+                <span class="browser__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span class="browser__url" aria-hidden="true">jhairceli9-crypto.github.io/sabor-y-brasa</span>
+              </div>
+              <figure class="project__media">
+                <img src="img/sabor-y-brasa-800.webp" srcset="img/sabor-y-brasa-480.webp 480w, img/sabor-y-brasa-800.webp 800w"
+                     sizes="(max-width: 900px) 92vw, 620px" width="800" height="500"
+                     alt="Captura de la página de inicio de Sabor &amp; Brasa" loading="lazy" decoding="async">
+                <img class="project__phone" src="img/sabor-y-brasa-movil.webp" width="300" height="569"
+                     alt="Captura de la versión para celular de Sabor &amp; Brasa" loading="lazy" decoding="async">
+              </figure>
+            </div>
+            <div class="project__body">
+              <span class="tag">Demostración · restaurante ficticio</span>
+              <h3 class="project__title">Sabor &amp; Brasa</h3>
+              <p class="project__text">Restaurante ficticio con menú digital, galería y contacto demostrativo.</p>
+              <ul class="project__features">
+                <li>Menú digital con filtros por categoría</li>
+                <li>Galería con visor usable con teclado</li>
+                <li>Consulta por WhatsApp configurable</li>
+              </ul>
+              <ul class="chips" aria-label="Tecnologías">
+                <li>HTML</li><li>CSS</li><li>JavaScript</li><li>GitHub Pages</li>
+              </ul>
+              <div class="project__actions">
+                <a class="btn btn--primary" href="https://jhairceli9-crypto.github.io/sabor-y-brasa/" target="_blank" rel="noopener noreferrer">Ver proyecto <span aria-hidden="true">↗</span><span class="sr-only">: Sabor &amp; Brasa (se abre en una pestaña nueva)</span></a>
+                <a class="btn btn--ghost" href="https://github.com/jhairceli9-crypto/sabor-y-brasa" target="_blank" rel="noopener noreferrer">Código<span class="sr-only"> de Sabor &amp; Brasa en GitHub (se abre en una pestaña nueva)</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Botiquín del Barrio -->
+          <article class="project reveal">
+            <div class="browser project__browser">
+              <div class="browser__bar">
+                <span class="browser__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span class="browser__url" aria-hidden="true">botiquin-del-barrio.netlify.app</span>
+              </div>
+              <figure class="project__media">
+                <img src="img/botiquin-800.webp" srcset="img/botiquin-480.webp 480w, img/botiquin-800.webp 800w"
+                     sizes="(max-width: 900px) 92vw, 620px" width="800" height="500"
+                     alt="Captura de la página de inicio de Botiquín del Barrio" loading="lazy" decoding="async">
+                <img class="project__phone" src="img/botiquin-movil.webp" width="300" height="569"
+                     alt="Captura de la versión para celular de Botiquín del Barrio" loading="lazy" decoding="async">
+              </figure>
+            </div>
+            <div class="project__body">
+              <span class="tag">Demostración · diseño web</span>
+              <h3 class="project__title">Botiquín del Barrio</h3>
+              <p class="project__text">Interfaz web de farmacia con catálogo y navegación, presentada como trabajo de diseño y desarrollo.</p>
+              <ul class="project__features">
+                <li>Catálogo con buscador y categorías</li>
+                <li>Diseño adaptado a celulares</li>
+                <li>Modo claro y oscuro</li>
+              </ul>
+              <ul class="chips" aria-label="Tecnologías">
+                <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Netlify</li>
+              </ul>
+              <div class="project__actions">
+                <a class="btn btn--primary" href="https://botiquin-del-barrio.netlify.app/" target="_blank" rel="noopener noreferrer">Ver proyecto <span aria-hidden="true">↗</span><span class="sr-only">: Botiquín del Barrio (se abre en una pestaña nueva)</span></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 4. PRECIOS DE LANZAMIENTO =====
+         Precios definidos por el dueño del portafolio. Para cambiar un precio o lo que incluye,
+         edita el bloque <article class="plan">. data-plan = nombre que aparece en el mensaje de WhatsApp. -->
+    <section class="section" id="precios" aria-labelledby="precios-title">
+      <div class="container">
+        <header class="section__head section__head--center reveal">
+          <p class="eyebrow">Precios de lanzamiento</p>
+          <h2 class="section__title" id="precios-title">Planes claros, sin sorpresas</h2>
+          <p class="section__text">Precios en dólares (USD) para sitios sencillos. El alcance final se confirma en la propuesta, antes de empezar.</p>
+        </header>
+
+        <div class="plans">
+          <article class="plan reveal">
+            <h3 class="plan__name">Plan Básico</h3>
+            <p class="plan__price"><span class="plan__amount">$25</span> <span class="plan__currency">USD</span></p>
+            <p class="plan__desc">Para presentar tu negocio de forma clara.</p>
+            <ul class="plan__list" aria-label="Incluye">
+              <li>Hasta 3 secciones</li>
+              <li>Diseño responsive</li>
+              <li>Botón de WhatsApp</li>
+              <li>Información y horarios</li>
+              <li>1 ronda de modificaciones</li>
+            </ul>
+            <a class="btn btn--ghost btn--full" href="#contacto" data-plan="Básico">Solicitar cotización<span class="sr-only"> del Plan Básico</span></a>
+          </article>
+
+          <article class="plan plan--featured reveal">
+            <p class="plan__badge">Recomendado</p>
+            <h3 class="plan__name">Plan Emprendedor</h3>
+            <p class="plan__price"><span class="plan__amount">$35</span> <span class="plan__currency">USD</span></p>
+            <p class="plan__desc">Para mostrar más: galería, menú o servicios.</p>
+            <ul class="plan__list" aria-label="Incluye">
+              <li>Hasta 5 secciones</li>
+              <li>Galería de imágenes</li>
+              <li>Menú digital o servicios</li>
+              <li>WhatsApp y redes sociales</li>
+              <li>2 rondas de modificaciones</li>
+            </ul>
+            <a class="btn btn--primary btn--full" href="#contacto" data-plan="Emprendedor">Solicitar cotización<span class="sr-only"> del Plan Emprendedor</span></a>
+          </article>
+
+          <article class="plan reveal">
+            <h3 class="plan__name">Plan Catálogo</h3>
+            <p class="plan__price"><span class="plan__amount">$50</span> <span class="plan__currency">USD</span></p>
+            <p class="plan__desc">Para mostrar tus productos organizados.</p>
+            <ul class="plan__list" aria-label="Incluye">
+              <li>Hasta 20 productos</li>
+              <li>Fotografías y precios</li>
+              <li>Filtros por categorías</li>
+              <li>WhatsApp para consultas</li>
+              <li>2 rondas de modificaciones</li>
+            </ul>
+            <a class="btn btn--ghost btn--full" href="#contacto" data-plan="Catálogo">Solicitar cotización<span class="sr-only"> del Plan Catálogo</span></a>
+          </article>
+        </div>
+
+        <ul class="plans__notes reveal" aria-label="Condiciones de los planes">
+          <li>Son <strong>precios de lanzamiento</strong> para sitios sencillos.</li>
+          <li>Dominio, hosting de pago y funciones adicionales se presupuestan aparte.</li>
+          <li>Los contenidos y fotografías deben ser proporcionados por el cliente.</li>
+          <li>No incluyen tienda online con pagos integrados.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== 5. PROCESO DE TRABAJO ===== -->
+    <section class="section section--alt" id="como-trabajamos" aria-labelledby="proceso-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Proceso de trabajo</p>
+          <h2 class="section__title" id="proceso-title">De la idea a tu página publicada</h2>
+          <p class="section__text">Cinco pasos claros: siempre sabrás en qué etapa está tu proyecto.</p>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline__step reveal">
+            <span class="timeline__num" aria-hidden="true">01</span>
+            <h3 class="timeline__title">Consulta inicial</h3>
+            <p>Conversamos sobre tu negocio y lo que quieres mostrar.</p>
+          </li>
+          <li class="timeline__step reveal">
+            <span class="timeline__num" aria-hidden="true">02</span>
+            <h3 class="timeline__title">Propuesta y presupuesto</h3>
+            <p>Te envío secciones, plazo estimado, precio y lo que necesito de ti.</p>
+          </li>
+          <li class="timeline__step reveal">
+            <span class="timeline__num" aria-hidden="true">03</span>
+            <h3 class="timeline__title">Diseño y desarrollo</h3>
+            <p>Construyo tu página y te muestro avances.</p>
+          </li>
+          <li class="timeline__step reveal">
+            <span class="timeline__num" aria-hidden="true">04</span>
+            <h3 class="timeline__title">Revisión</h3>
+            <p>Revisamos juntos en celular y computadora y aplico tus ajustes.</p>
+          </li>
+          <li class="timeline__step reveal">
+            <span class="timeline__num" aria-hidden="true">05</span>
+            <h3 class="timeline__title">Entrega</h3>
+            <p>Publico tu página y te explico cómo actualizar lo básico.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== 6. SOBRE MÍ ===== -->
     <section class="section" id="sobre-mi" aria-labelledby="sobre-title">
       <div class="container about">
         <div class="about__text">
@@ -121,226 +411,7 @@
       </div>
     </section>
 
-    <!-- ===== 3. SERVICIOS =====
-         Cada tarjeta: título, descripción, beneficios y botón. El botón abre WhatsApp con el
-         nombre del servicio (data-service) si el número está configurado en script.js. -->
-    <section class="section section--alt" id="servicios" aria-labelledby="servicios-title">
-      <div class="container">
-        <header class="section__head reveal">
-          <p class="eyebrow">Servicios</p>
-          <h2 class="section__title" id="servicios-title">Servicios para tu negocio</h2>
-          <p class="section__text">Elige lo que necesitas hoy. Antes de empezar te explico cada opción con claridad, sin tecnicismos.</p>
-        </header>
-
-        <div class="cards">
-          <article class="card reveal">
-            <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 13h8M8 16h5"/></svg></span>
-            <h3 class="card__title">Página web informativa</h3>
-            <p>Una página para presentar tu negocio en Internet: quién eres, qué ofreces y cómo contactarte.</p>
-            <ul class="card__benefits" aria-label="Beneficios">
-              <li>Tu información en un solo enlace, fácil de compartir</li>
-              <li>Se ve bien en celulares, tablets y computadoras</li>
-              <li>Botón directo para que te escriban por WhatsApp</li>
-            </ul>
-            <a class="card__cta" href="#contacto" data-service="página web informativa">Consultar este servicio<span class="sr-only">: página web informativa</span> <span aria-hidden="true">→</span></a>
-          </article>
-
-          <article class="card reveal">
-            <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3v8a3 3 0 0 0 3 3v7M7 3v5M10 3v5M13 3v5"/><path d="M17 3c-1.7 1.5-2.5 3.5-2.5 6s1 3 2.5 3v9"/></svg></span>
-            <h3 class="card__title">Menú digital para restaurantes</h3>
-            <p>Tu carta en línea con fotos, precios y categorías, más horarios y ubicación.</p>
-            <ul class="card__benefits" aria-label="Beneficios">
-              <li>Tus clientes revisan el menú desde el celular</li>
-              <li>Platos y precios organizados por categorías</li>
-              <li>Cambiar un precio no obliga a reimprimir la carta</li>
-            </ul>
-            <a class="card__cta" href="#contacto" data-service="menú digital">Consultar este servicio<span class="sr-only">: menú digital</span> <span aria-hidden="true">→</span></a>
-          </article>
-
-          <article class="card reveal">
-            <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>
-            <h3 class="card__title">Catálogo web de productos</h3>
-            <p>Tus productos con foto, descripción y categorías, para mostrar lo que vendes en un solo lugar.</p>
-            <ul class="card__benefits" aria-label="Beneficios">
-              <li>Productos ordenados y fáciles de encontrar</li>
-              <li>Buscador y filtros por categoría</li>
-              <li>Consultas por WhatsApp sobre cada producto</li>
-            </ul>
-            <a class="card__cta" href="#contacto" data-service="catálogo web">Consultar este servicio<span class="sr-only">: catálogo web</span> <span aria-hidden="true">→</span></a>
-          </article>
-
-          <article class="card reveal">
-            <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4 2.5-2.5z"/></svg></span>
-            <h3 class="card__title">Mantenimiento básico</h3>
-            <p>Cambios sencillos en una página que ya existe, para que tu información siga al día.</p>
-            <ul class="card__benefits" aria-label="Beneficios">
-              <li>Actualizar textos, fotos, precios u horarios</li>
-              <li>Revisar que se vea bien en celulares</li>
-              <li>Corregir enlaces o botones que no funcionan</li>
-            </ul>
-            <a class="card__cta" href="#contacto" data-service="mantenimiento básico">Consultar este servicio<span class="sr-only">: mantenimiento básico</span> <span aria-hidden="true">→</span></a>
-          </article>
-        </div>
-
-        <p class="honest-note reveal">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
-          <span><strong>Para ser claro:</strong> por ahora no desarrollo tiendas con pagos en línea, sistemas con base de datos ni áreas con usuario y contraseña. Una página web ayuda a presentar tu negocio, pero no garantiza ventas.</span>
-        </p>
-      </div>
-    </section>
-
-    <!-- ===== 4. PROYECTOS =====
-         Para agregar un proyecto: copia un <article class="project"> completo,
-         pon su captura en img/ (800 y 480 px de ancho, formato .webp) y cambia textos y enlaces. -->
-    <section class="section" id="proyectos" aria-labelledby="proyectos-title">
-      <div class="container">
-        <header class="section__head reveal">
-          <p class="eyebrow">Proyectos</p>
-          <h2 class="section__title" id="proyectos-title">Proyectos de práctica</h2>
-          <p class="section__text">Tres sitios de demostración publicados que puedes abrir y probar. Las capturas son reales.</p>
-        </header>
-
-        <div class="projects">
-          <!-- NovaTech Solutions -->
-          <article class="project reveal">
-            <figure class="project__media">
-              <img src="img/novatech-800.webp" srcset="img/novatech-480.webp 480w, img/novatech-800.webp 800w"
-                   sizes="(max-width: 700px) 92vw, (max-width: 1100px) 46vw, 370px" width="800" height="500"
-                   alt="Captura de la página de inicio de NovaTech Solutions" loading="lazy" decoding="async">
-              <!-- Captura real en formato celular (390 px): muestra que el sitio es responsive -->
-              <img class="project__phone" src="img/novatech-movil.webp" width="300" height="569"
-                   alt="Captura de la versión para celular de NovaTech Solutions" loading="lazy" decoding="async">
-            </figure>
-            <div class="project__body">
-              <span class="tag">Demostración · empresa ficticia</span>
-              <h3 class="project__title">NovaTech Solutions</h3>
-              <p class="project__text">Proyecto demostrativo de presentación de servicios tecnológicos para una empresa ficticia.</p>
-              <ul class="project__features">
-                <li>Menú móvil accesible con teclado</li>
-                <li>Sección de proyectos con filtros</li>
-                <li>Formulario demostrativo con validación</li>
-              </ul>
-              <ul class="chips" aria-label="Tecnologías">
-                <li>HTML</li><li>CSS</li><li>JavaScript</li><li>GitHub Pages</li>
-              </ul>
-              <div class="project__actions">
-                <a class="btn btn--primary btn--sm" href="https://jhairceli9-crypto.github.io/novatech-solutions/" target="_blank" rel="noopener noreferrer">Ver proyecto <span aria-hidden="true">↗</span><span class="sr-only">: NovaTech Solutions (se abre en una pestaña nueva)</span></a>
-                <a class="btn btn--ghost btn--sm" href="https://github.com/jhairceli9-crypto/novatech-solutions" target="_blank" rel="noopener noreferrer">Código<span class="sr-only"> de NovaTech Solutions en GitHub (se abre en una pestaña nueva)</span></a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Sabor & Brasa -->
-          <article class="project reveal">
-            <figure class="project__media">
-              <img src="img/sabor-y-brasa-800.webp" srcset="img/sabor-y-brasa-480.webp 480w, img/sabor-y-brasa-800.webp 800w"
-                   sizes="(max-width: 700px) 92vw, (max-width: 1100px) 46vw, 370px" width="800" height="500"
-                   alt="Captura de la página de inicio de Sabor &amp; Brasa" loading="lazy" decoding="async">
-              <!-- Captura real en formato celular (390 px): muestra que el sitio es responsive -->
-              <img class="project__phone" src="img/sabor-y-brasa-movil.webp" width="300" height="569"
-                   alt="Captura de la versión para celular de Sabor &amp; Brasa" loading="lazy" decoding="async">
-            </figure>
-            <div class="project__body">
-              <span class="tag">Demostración · restaurante ficticio</span>
-              <h3 class="project__title">Sabor &amp; Brasa</h3>
-              <p class="project__text">Restaurante ficticio con menú digital, galería y contacto demostrativo.</p>
-              <ul class="project__features">
-                <li>Menú digital con filtros por categoría</li>
-                <li>Galería con visor usable con teclado</li>
-                <li>Consulta por WhatsApp configurable</li>
-              </ul>
-              <ul class="chips" aria-label="Tecnologías">
-                <li>HTML</li><li>CSS</li><li>JavaScript</li><li>GitHub Pages</li>
-              </ul>
-              <div class="project__actions">
-                <a class="btn btn--primary btn--sm" href="https://jhairceli9-crypto.github.io/sabor-y-brasa/" target="_blank" rel="noopener noreferrer">Ver proyecto <span aria-hidden="true">↗</span><span class="sr-only">: Sabor &amp; Brasa (se abre en una pestaña nueva)</span></a>
-                <a class="btn btn--ghost btn--sm" href="https://github.com/jhairceli9-crypto/sabor-y-brasa" target="_blank" rel="noopener noreferrer">Código<span class="sr-only"> de Sabor &amp; Brasa en GitHub (se abre en una pestaña nueva)</span></a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Botiquín del Barrio -->
-          <article class="project reveal">
-            <figure class="project__media">
-              <img src="img/botiquin-800.webp" srcset="img/botiquin-480.webp 480w, img/botiquin-800.webp 800w"
-                   sizes="(max-width: 700px) 92vw, (max-width: 1100px) 46vw, 370px" width="800" height="500"
-                   alt="Captura de la página de inicio de Botiquín del Barrio" loading="lazy" decoding="async">
-              <!-- Captura real en formato celular (390 px): muestra que el sitio es responsive -->
-              <img class="project__phone" src="img/botiquin-movil.webp" width="300" height="569"
-                   alt="Captura de la versión para celular de Botiquín del Barrio" loading="lazy" decoding="async">
-            </figure>
-            <div class="project__body">
-              <span class="tag">Demostración · diseño web</span>
-              <h3 class="project__title">Botiquín del Barrio</h3>
-              <p class="project__text">Proyecto de interfaz web de farmacia con catálogo y navegación. Se presenta como trabajo de diseño y desarrollo web.</p>
-              <ul class="project__features">
-                <li>Catálogo con buscador y categorías</li>
-                <li>Diseño adaptado a celulares</li>
-                <li>Modo claro y oscuro</li>
-              </ul>
-              <ul class="chips" aria-label="Tecnologías">
-                <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Netlify</li>
-              </ul>
-              <div class="project__actions">
-                <a class="btn btn--primary btn--sm" href="https://botiquin-del-barrio.netlify.app/" target="_blank" rel="noopener noreferrer">Ver proyecto <span aria-hidden="true">↗</span><span class="sr-only">: Botiquín del Barrio (se abre en una pestaña nueva)</span></a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Llamada a la acción ===== -->
-    <section class="cta-band" aria-labelledby="cta-title">
-      <div class="container">
-        <div class="cta-band__box reveal">
-          <div>
-            <h2 class="cta-band__title" id="cta-title">¿Te gustaría una página así para tu negocio?</h2>
-            <p>Cuéntame qué necesitas y te preparo una propuesta clara, sin compromiso.</p>
-          </div>
-          <div class="cta-band__actions">
-            <a class="btn btn--light btn--lg" href="#contacto" data-wa>Escribirme por WhatsApp</a>
-            <a class="btn btn--outline-light btn--lg" href="#servicios">Ver servicios</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 5. CÓMO TRABAJAMOS ===== -->
-    <section class="section" id="como-trabajamos" aria-labelledby="proceso-title">
-      <div class="container">
-        <header class="section__head reveal">
-          <p class="eyebrow">Cómo trabajamos</p>
-          <h2 class="section__title" id="proceso-title">Cuatro pasos, sin complicaciones</h2>
-          <p class="section__text">Siempre sabrás en qué etapa está tu página y qué necesito de ti.</p>
-        </header>
-
-        <ol class="steps">
-          <li class="step reveal">
-            <span class="step__num" aria-hidden="true">1</span>
-            <h3 class="step__title">Conocer tu negocio</h3>
-            <p>Conversamos sobre lo que vendes, a quién y qué quieres mostrar en la página.</p>
-          </li>
-          <li class="step reveal">
-            <span class="step__num" aria-hidden="true">2</span>
-            <h3 class="step__title">Preparar la propuesta</h3>
-            <p>Te envío las secciones, lo que necesito de ti (textos, fotos, logo), el plazo estimado y el precio.</p>
-          </li>
-          <li class="step reveal">
-            <span class="step__num" aria-hidden="true">3</span>
-            <h3 class="step__title">Diseñar y desarrollar</h3>
-            <p>Construyo la página y te muestro avances para que opines y pidas ajustes.</p>
-          </li>
-          <li class="step reveal">
-            <span class="step__num" aria-hidden="true">4</span>
-            <h3 class="step__title">Revisar y publicar</h3>
-            <p>La probamos juntos en celular y computadora y la publico en Internet.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- ===== 6. PREGUNTAS FRECUENTES =====
+    <!-- ===== 7. PREGUNTAS FRECUENTES =====
          Cada pregunta es un <details>: se abre y se cierra sin JavaScript y funciona con teclado. -->
     <section class="section section--alt" id="preguntas" aria-labelledby="faq-title">
       <div class="container">
@@ -356,37 +427,39 @@
           </details>
           <details class="faq__item">
             <summary>¿Puedo pedir cambios?</summary>
-            <p>Sí. Durante el desarrollo te muestro avances para que pidas ajustes. En la propuesta acordamos cuántas rondas de cambios incluye y cómo se manejan los cambios posteriores.</p>
+            <p>Sí. El Plan Básico incluye 1 ronda de modificaciones y los planes Emprendedor y Catálogo incluyen 2. Los cambios adicionales se acuerdan aparte.</p>
           </details>
           <details class="faq__item">
             <summary>¿Cómo se publica la página en Internet?</summary>
-            <p>Puedo publicarla en servicios gratuitos como GitHub Pages o Netlify, con una dirección como <em>tunegocio.netlify.app</em>. Si prefieres un dominio propio (por ejemplo <em>tunegocio.com</em>), tiene un costo anual del proveedor y conviene que quede registrado a tu nombre.</p>
+            <p>Puedo publicarla en servicios gratuitos como GitHub Pages o Netlify, con una dirección como <em>tunegocio.netlify.app</em>. Un dominio propio (por ejemplo <em>tunegocio.com</em>) o un hosting de pago se presupuestan aparte, y conviene que el dominio quede registrado a tu nombre.</p>
           </details>
           <details class="faq__item">
             <summary>¿Qué necesito tener listo?</summary>
-            <p>Información de tu negocio (qué ofreces, horarios, ubicación, contacto), tus fotos y tu logo si lo tienes. Si te falta algo, te ayudo a organizarlo.</p>
+            <p>Los contenidos y fotografías de tu negocio: qué ofreces, horarios, ubicación, contacto y tu logo si lo tienes. Si te falta algo, te ayudo a organizarlo.</p>
           </details>
           <details class="faq__item">
             <summary>¿Podré actualizar la página después?</summary>
-            <p>Sí. Te explico cómo cambiar lo básico, o puedo encargarme de los cambios con el servicio de mantenimiento.</p>
+            <p>Sí. Te explico cómo cambiar lo básico, o puedo encargarme de los cambios con el servicio de mantenimiento web.</p>
           </details>
           <details class="faq__item">
             <summary>¿Cuánto cuesta?</summary>
-            <p>Depende de las secciones y funciones que necesites. Te envío una propuesta con el precio antes de empezar, sin compromiso.</p>
+            <p>Los precios de lanzamiento van desde $25 (Plan Básico) hasta $50 (Plan Catálogo) para sitios sencillos. El precio final se confirma en la propuesta, antes de empezar y sin compromiso.</p>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- ===== 7. CONTACTO =====
-         Los datos de contacto se configuran en script.js (CONFIG). Si faltan, se muestran como pendientes. -->
+    <!-- ===== 8. CONTACTO =====
+         Los enlaces reales están escritos aquí (funcionan sin JavaScript) y se sincronizan con CONFIG (script.js). -->
     <section class="section" id="contacto" aria-labelledby="contacto-title">
       <div class="container">
         <div class="contact reveal">
           <div class="contact__intro">
             <p class="eyebrow">Contacto</p>
-            <h2 class="section__title" id="contacto-title">Hablemos de tu página web</h2>
-            <p>Escríbeme y cuéntame a qué se dedica tu negocio y qué te gustaría mostrar. Te respondo personalmente con una propuesta clara y sin compromiso.</p>
+            <h2 class="section__title" id="contacto-title">¿Listo para tu página web?</h2>
+            <p>Cuéntame a qué se dedica tu negocio y qué te gustaría mostrar. Te respondo personalmente con una cotización clara y sin compromiso.</p>
+            <!-- Botón principal: enlace real (sin JavaScript también funciona) -->
+            <a class="btn btn--primary btn--lg contact__cta" data-wa href="https://wa.me/593991849364?text=Hola%2C%20vi%20tu%20portafolio%20y%20quisiera%20informaci%C3%B3n%20sobre%20una%20p%C3%A1gina%20web." target="_blank" rel="noopener noreferrer">Solicitar cotización por WhatsApp<span class="sr-only"> (se abre en una pestaña nueva)</span></a>
           </div>
 
           <ul class="channels">
@@ -395,7 +468,7 @@
               <div class="channel__body">
                 <h3 class="channel__title">WhatsApp</h3>
                 <!-- Enlace real escrito en el HTML: funciona aunque JavaScript no se ejecute.
-                     Si cambias el número, cámbialo AQUÍ y en CONFIG.whatsappNumber (script.js). -->
+                     Si cambias el número, cámbialo AQUÍ, en el botón de arriba y en CONFIG.whatsappNumber (script.js). -->
                 <a class="channel__link" data-contact="whatsapp" href="https://wa.me/593991849364?text=Hola%2C%20vi%20tu%20portafolio%20y%20quisiera%20informaci%C3%B3n%20sobre%20una%20p%C3%A1gina%20web." target="_blank" rel="noopener noreferrer">Escribirme por WhatsApp<span class="sr-only"> (se abre en una pestaña nueva)</span></a>
               </div>
             </li>
@@ -420,7 +493,7 @@
     </section>
   </main>
 
-  <!-- ===== 8. PIE DE PÁGINA ===== -->
+  <!-- ===== 9. PIE DE PÁGINA ===== -->
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
@@ -431,10 +504,11 @@
         <p>Portafolio personal de un desarrollador web en formación. Los proyectos mostrados son de práctica y demostración.</p>
       </div>
       <nav class="footer__nav" aria-label="Pie de página">
-        <a href="#sobre-mi">Sobre mí</a>
         <a href="#servicios">Servicios</a>
         <a href="#proyectos">Proyectos</a>
-        <a href="#como-trabajamos">Cómo trabajamos</a>
+        <a href="#precios">Precios</a>
+        <a href="#como-trabajamos">Proceso</a>
+        <a href="#sobre-mi">Sobre mí</a>
         <a href="#preguntas">Preguntas frecuentes</a>
         <a href="#contacto">Contacto</a>
         <a data-github href="https://github.com/jhairceli9-crypto" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (se abre en una pestaña nueva)</span> <span aria-hidden="true">↗</span></a>
@@ -445,6 +519,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=6" defer></script>
+  <script src="script.js?v=8" defer></script>
 </body>
 </html>

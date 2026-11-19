@@ -10,15 +10,14 @@ Portafolio personal de un desarrollador web en formación. Muestra proyectos rea
 
 | Sección | Contenido |
 |---|---|
-| Inicio | Título, subtítulo, botones «Ver mis proyectos» y «Solicitar información», y capturas reales de los proyectos. |
-| Sobre mí | Presentación honesta como desarrollador en formación y habilidades que ya se practican en los proyectos. |
-| Servicios | 4 servicios (web informativa, menú digital, catálogo y mantenimiento) con beneficios y botón «Consultar este servicio», más una nota de lo que **todavía no** se ofrece y de que una web no garantiza ventas. |
-| Proyectos | NovaTech Solutions, Sabor & Brasa y Botiquín del Barrio, con captura real, descripción, funciones, tecnologías verificadas y botón «Ver proyecto». |
-| Llamada a la acción | Banda «¿Te gustaría una página así para tu negocio?» con botón de WhatsApp. |
-| Cómo trabajamos | 4 pasos: conocer el negocio, propuesta, desarrollo y publicación. |
-| Preguntas frecuentes | Plazos, cambios, publicación, qué tener listo, actualizaciones y precio (sin cifras inventadas). |
-| Contacto | WhatsApp y correo configurados, enlace a GitHub y botón flotante de WhatsApp. |
-| Pie | Navegación, GitHub y aviso de portafolio personal. |
+| Inicio | «Transformo ideas en páginas web profesionales», botones «Ver mis proyectos» y «Solicitar cotización», captura real enmarcada y decoración geométrica con CSS. |
+| Servicios | Páginas web informativas, páginas para restaurantes, catálogos digitales y mantenimiento web básico (botón «Consultar» → WhatsApp). |
+| Proyectos | NovaTech Solutions, Sabor & Brasa y Botiquín del Barrio en tarjetas grandes estilo navegador, marcados como **demostración**. |
+| Precios | Precios de lanzamiento: Básico $25, Emprendedor $35 (recomendado) y Catálogo $50, con «Solicitar cotización» → WhatsApp y aclaraciones. |
+| Proceso | Línea de tiempo de 5 pasos: consulta, propuesta, desarrollo, revisión y entrega. |
+| Sobre mí | Presentación honesta y habilidades que se practican en los proyectos. |
+| Preguntas frecuentes | Plazos, cambios (rondas por plan), publicación, contenidos, actualizaciones y precio. |
+| Contacto | Botón «Solicitar cotización por WhatsApp», WhatsApp, correo y GitHub; botón flotante. |
 
 ## Archivos
 
@@ -57,6 +56,29 @@ Si cambias tu número o correo, **cámbialo en los dos**. Si no coinciden, la co
 
 El número se puede escribir con `+`, espacios o guiones. **Formato de Ecuador:** 593 + el número sin el 0 inicial (099… → 59399…). Los datos inválidos generan un aviso en la consola (`F12`).
 
+## Estilo visual (Tech Premium V2)
+
+Sistema de diseño en variables al inicio de `styles.css`: colores, tipografía (`--fs-*`), espacios (`--sp-1` … `--sp-8`), bordes (`--r-*`), sombras y transiciones (`--t-*`). Fuente **Inter**.
+
+| Variable | Color | Uso |
+|---|---|---|
+| `--bg` | `#080D1A` | Fondo principal |
+| `--surface` | `#14213D` | Tarjetas |
+| `--brand` | `#3B82F6` | Azul de marca: botones (texto `#080D1A` encima: 5,27:1; el blanco solo daría 3,68:1) |
+| `--cyan` | `#22D3EE` | Acento: enlaces, foco y detalles (8,8:1 sobre tarjetas) |
+| `--text` | `#F1F5F9` | Texto principal |
+| `--muted` | `#A5B4CB` | Texto secundario (7,6:1 sobre tarjetas) |
+
+Degradados solo discretos: radial suave en la portada, línea superior del plan recomendado y la línea del proceso. Animaciones cortas; el anillo decorativo gira muy lento y se detiene con «reducir movimiento».
+
+## Precios
+
+En `index.html`, sección `===== 4. PRECIOS DE LANZAMIENTO =====`: cada plan es un `<article class="plan">`.
+- **Precio:** cambia el número dentro de `<span class="plan__amount">`.
+- **Qué incluye:** edita la lista `<ul class="plan__list">`.
+- **Botón «Solicitar cotización»:** `data-plan="…"` es el nombre del plan en el mensaje de WhatsApp («quiero cotizar el Plan …»).
+- El plan destacado lleva la clase `plan--featured` (solo cambia el borde).
+
 ## Cómo editar el contenido
 
 - **Textos:** directamente en `index.html`; cada sección tiene un comentario `===== N. NOMBRE =====`.
@@ -90,7 +112,7 @@ En Chrome: `F12` → `Ctrl + Shift + M` para ver el formato de celular.
 1. Crea un repositorio (por ejemplo `mi-portafolio-web`) y sube los archivos.
 2. En GitHub: **Settings → Pages → Branch: main / (root)**.
 3. **Vista previa al compartir:** `og:image`, `og:url` y `canonical` ya apuntan a `https://jhairceli9-crypto.github.io/mi-portafolio-web/`. Si cambias el nombre del repositorio, actualiza esas tres líneas en `index.html`.
-4. Cada vez que cambies `styles.css` o `script.js`, sube la versión en `index.html` (`?v=6` → `?v=7`).
+4. Cada vez que cambies `styles.css` o `script.js`, sube la versión en `index.html` (`?v=8` → `?v=9`).
 
 ## Calidad comprobada
 
