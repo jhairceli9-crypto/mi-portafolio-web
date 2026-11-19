@@ -56,20 +56,21 @@ Si cambias tu número o correo, **cámbialo en los dos**. Si no coinciden, la co
 
 El número se puede escribir con `+`, espacios o guiones. **Formato de Ecuador:** 593 + el número sin el 0 inicial (099… → 59399…). Los datos inválidos generan un aviso en la consola (`F12`).
 
-## Estilo visual (Tech Premium V2)
+## Estilo visual (Tech Premium Minimalista, V3)
 
 Sistema de diseño en variables al inicio de `styles.css`: colores, tipografía (`--fs-*`), espacios (`--sp-1` … `--sp-8`), bordes (`--r-*`), sombras y transiciones (`--t-*`). Fuente **Inter**.
 
 | Variable | Color | Uso |
 |---|---|---|
-| `--bg` | `#080D1A` | Fondo principal |
-| `--surface` | `#14213D` | Tarjetas |
-| `--brand` | `#3B82F6` | Azul de marca: botones (texto `#080D1A` encima: 5,27:1; el blanco solo daría 3,68:1) |
-| `--cyan` | `#22D3EE` | Acento: enlaces, foco y detalles (8,8:1 sobre tarjetas) |
+| `--bg` | `#0B1120` | Fondo principal |
+| `--surface` | `#151E2E` | Tarjetas |
+| `--brand` | `#3B82F6` | Azul principal: botones (texto `#0B1120` encima; el blanco solo daría 3,68:1) |
+| `--accent` | `#60A5FA` | Azul claro para enlaces, foco y detalles (el `#3B82F6` como texto no llega a 4,5:1) |
 | `--text` | `#F1F5F9` | Texto principal |
-| `--muted` | `#A5B4CB` | Texto secundario (7,6:1 sobre tarjetas) |
+| `--muted` | `#94A3B8` | Texto secundario |
+| `--border` | `rgba(148,163,184,.15)` | Bordes finos |
 
-Degradados solo discretos: radial suave en la portada, línea superior del plan recomendado y la línea del proceso. Animaciones cortas; el anillo decorativo gira muy lento y se detiene con «reducir movimiento».
+Fondos sólidos en toda la página; **un solo degradado** (radial, muy suave) en la portada. Sin brillos ni decoraciones animadas; animaciones cortas que se desactivan con «reducir movimiento».
 
 ## Precios
 
@@ -112,7 +113,7 @@ En Chrome: `F12` → `Ctrl + Shift + M` para ver el formato de celular.
 1. Crea un repositorio (por ejemplo `mi-portafolio-web`) y sube los archivos.
 2. En GitHub: **Settings → Pages → Branch: main / (root)**.
 3. **Vista previa al compartir:** `og:image`, `og:url` y `canonical` ya apuntan a `https://jhairceli9-crypto.github.io/mi-portafolio-web/`. Si cambias el nombre del repositorio, actualiza esas tres líneas en `index.html`.
-4. Cada vez que cambies `styles.css` o `script.js`, sube la versión en `index.html` (`?v=8` → `?v=9`).
+4. Cada vez que cambies `styles.css` o `script.js`, sube la versión en `index.html` (`?v=9` → `?v=10`).
 
 ## Calidad comprobada
 
