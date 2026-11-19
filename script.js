@@ -9,8 +9,11 @@
    email          → tu correo REAL. Vacío = pendiente.
    githubUser     → tu usuario de GitHub (para los enlaces "GitHub").
    whatsappMessage / emailSubject → texto inicial que verá la persona al escribirte.
-   Mientras whatsappNumber o email estén vacíos, la web muestra "Pendiente de configurar"
-   y NO crea enlaces falsos ni simula mensajes enviados. */
+
+   IMPORTANTE: los enlaces de WhatsApp y correo de la sección Contacto también están escritos
+   en index.html (para que funcionen aunque JavaScript no se ejecute). Si cambias un dato,
+   cámbialo en los DOS lugares. Si no coinciden, la consola (F12) te avisa.
+   Si un dato falta o es inválido, la web muestra "no disponible" y NO crea enlaces falsos. */
 const CONFIG = {
   brandName: "Jhair Ivan Celi",
   whatsappNumber: "593991849364",   // +593 99 184 9364 (sin el 0 inicial del formato nacional)
@@ -25,16 +28,28 @@ const CONFIG = {
 /** Limpia el número (quita +, espacios y guiones) y lo valida. Devuelve los dígitos o null. */
 const getWhatsAppNumber = () => {
   const digits = String(CONFIG.whatsappNumber || "").replace(/[\s+\-().]/g, "");
-  if (!digits) return null;
-  if (!/^\d{8,15}$/.test(digits)) { console.warn("[Portafolio] whatsappNumber no es válido: se muestra como pendiente."); return null; }
+  if (!digits) {
+    console.error("[Portafolio] Falta CONFIG.whatsappNumber en script.js: el botón de WhatsApp se muestra como «no disponible».");
+    return null;
+  }
+  if (!/^\d{8,15}$/.test(digits)) {
+    console.error(`[Portafolio] CONFIG.whatsappNumber no es válido (debe tener de 8 a 15 dígitos con código de país; Ecuador: 593 + número sin el 0). Valor recibido con ${digits.length} caracteres.`);
+    return null;
+  }
   return digits;
 };
 
 /** Valida el correo con una regla sencilla. Devuelve el correo o null. */
 const getEmail = () => {
   const email = String(CONFIG.email || "").trim();
-  if (!email) return null;
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { console.warn("[Portafolio] email no es válido: se muestra como pendiente."); return null; }
+  if (!email) {
+    console.error("[Portafolio] Falta CONFIG.email en script.js: el correo se muestra como «no disponible».");
+    return null;
+  }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
+    console.error("[Portafolio] CONFIG.email no tiene formato de correo válido (ejemplo: nombre@dominio.com).");
+    return null;
+  }
   return email;
 };
 
@@ -60,29 +75,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ===================== 2. Canales de contacto ===================== */
   /**
-   * Convierte el aviso "Pendiente de configurar" en un botón real,
-   * SOLO si el dato está configurado y es válido.
+   * Los enlaces de contacto ya vienen escritos en index.html (funcionan sin JavaScript).
+   * Aquí se comparan con CONFIG:
+   * - CONFIG válido      → el enlace se actualiza con CONFIG (y avisa si el HTML tenía otro dato).
+   * - CONFIG falta/malo  → el enlace se reemplaza por un mensaje claro "no disponible"
+   *                        (nunca se deja un enlace que podría estar equivocado).
    */
-  const setChannel = (id, href, label, srText) => {
-    const body = document.querySelector(`#${id} .channel__body`);
-    const pending = body.querySelector(".channel__pending");
-    const link = el("a", "channel__link", label);
+  const syncContact = (type, value, href, label, srText, otherAvailable) => {
+    const link = document.querySelector(`[data-contact="${type}"]`);
+    if (!link) return;
+    if (!value) {
+      // Solo sugiere el otro medio si ese sí está disponible
+      const base = type === "whatsapp" ? "WhatsApp no disponible por el momento." : "Correo no disponible por el momento.";
+      const alt = type === "whatsapp" ? " Escríbeme por correo." : " Escríbeme por WhatsApp.";
+      link.replaceWith(el("p", "channel__error", base + (otherAvailable ? alt : " Puedes ver mi trabajo en GitHub.")));
+      return;
+    }
+    const htmlValue = type === "whatsapp" ? new URL(link.href).pathname.slice(1) : link.href.replace(/^mailto:/, "").split("?")[0];
+    if (htmlValue !== value) {
+      console.warn(`[Portafolio] El ${type === "whatsapp" ? "número" : "correo"} de index.html no coincide con CONFIG; se usa el de CONFIG. Actualiza index.html para que funcione también sin JavaScript.`);
+    }
     link.href = href;
-    if (href.startsWith("https://")) { link.target = "_blank"; link.rel = "noopener noreferrer"; }
-    link.append(el("span", "sr-only", srText));
-    pending.replaceWith(link);
+    link.replaceChildren(label, el("span", "sr-only", srText));
   };
 
   const wa = getWhatsAppNumber();
-  if (wa) {
-    setChannel("channelWhatsApp", `https://wa.me/${wa}?text=${encodeURIComponent(CONFIG.whatsappMessage)}`,
-      "Escribirme por WhatsApp", " (se abre en una pestaña nueva)");
-  }
   const email = getEmail();
-  if (email) {
-    setChannel("channelEmail", `mailto:${email}?subject=${encodeURIComponent(CONFIG.emailSubject)}`,
-      email, " (abre tu programa de correo)");
-  }
+  syncContact("whatsapp", wa, wa && `https://wa.me/${wa}?text=${encodeURIComponent(CONFIG.whatsappMessage)}`,
+    "Escribirme por WhatsApp", " (se abre en una pestaña nueva)", Boolean(email));
+  syncContact("email", email, email && `mailto:${email}?subject=${encodeURIComponent(CONFIG.emailSubject)}`,
+    email, " (abre tu programa de correo)", Boolean(wa));
   /**
    * Botones de llamada a la acción:
    * - [data-service] → "Consultar este servicio": WhatsApp con el nombre del servicio ya escrito.

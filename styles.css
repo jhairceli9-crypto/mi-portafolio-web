@@ -356,7 +356,8 @@ strong { color: var(--white); }
 .channel__icon svg { width: 22px; height: 22px; fill: none; stroke: var(--sky); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .channel__body { display: grid; gap: .2rem; min-width: 0; }
 .channel__title { font-size: 1rem; }
-.channel__pending { color: var(--muted); font-size: .9rem; font-style: italic; }
+/* Mensaje cuando un dato de contacto falta en CONFIG (script.js) */
+.channel__error { color: #FCD34D; font-size: .9rem; }
 .channel__link {
   display: inline-flex; align-items: center; gap: .35rem; min-height: 44px; width: fit-content;
   color: #7DD3FC; font-weight: 700; text-decoration: underline; text-underline-offset: 4px; text-decoration-color: rgba(125, 211, 252, .4);

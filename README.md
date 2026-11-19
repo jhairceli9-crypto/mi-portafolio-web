@@ -44,10 +44,16 @@ const CONFIG = {
 };
 ```
 
-| Dato | Si está vacío o es inválido | Si es válido |
-|---|---|---|
-| `whatsappNumber` | Se muestra «Pendiente de configurar»; los botones llevan a #contacto y no hay botón flotante. | Todos los botones de WhatsApp (servicios con su nombre, banda azul, contacto y botón flotante) abren `wa.me` con el mensaje. |
-| `email` | Se muestra «Pendiente de configurar»; no hay enlace. | Enlace `mailto:` con asunto. |
+**Los enlaces de la sección Contacto están en DOS lugares:**
+1. `index.html` (enlaces escritos directamente): funcionan aunque JavaScript no se ejecute (código fuente, buscadores, vistas previas, navegadores con JavaScript bloqueado).
+2. `CONFIG` en `script.js`: actualiza esos enlaces y arma los botones de servicios, la banda azul y el botón flotante.
+
+Si cambias tu número o correo, **cámbialo en los dos**. Si no coinciden, la consola (`F12`) muestra un aviso y se usa el de `CONFIG`.
+
+| Dato en `CONFIG` | Qué pasa |
+|---|---|
+| Válido | Todos los botones de WhatsApp/correo usan ese dato. |
+| Vacío o inválido | El enlace se reemplaza por «WhatsApp/Correo no disponible por el momento», los botones de servicios llevan a #contacto, no aparece el botón flotante y la consola explica qué falta. Nunca se crea un enlace falso. |
 
 El número se puede escribir con `+`, espacios o guiones. **Formato de Ecuador:** 593 + el número sin el 0 inicial (099… → 59399…). Los datos inválidos generan un aviso en la consola (`F12`).
 
@@ -84,7 +90,7 @@ En Chrome: `F12` → `Ctrl + Shift + M` para ver el formato de celular.
 1. Crea un repositorio (por ejemplo `mi-portafolio-web`) y sube los archivos.
 2. En GitHub: **Settings → Pages → Branch: main / (root)**.
 3. **Vista previa al compartir:** `og:image`, `og:url` y `canonical` ya apuntan a `https://jhairceli9-crypto.github.io/mi-portafolio-web/`. Si cambias el nombre del repositorio, actualiza esas tres líneas en `index.html`.
-4. Cada vez que cambies `styles.css` o `script.js`, sube la versión en `index.html` (`?v=4` → `?v=5`).
+4. Cada vez que cambies `styles.css` o `script.js`, sube la versión en `index.html` (`?v=6` → `?v=7`).
 
 ## Calidad comprobada
 

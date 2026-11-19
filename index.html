@@ -27,8 +27,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&display=swap" rel="stylesheet">
 
-  <!-- ?v=5 = versión de los archivos: súbela (v=2, v=3…) cada vez que publiques cambios en CSS o JS -->
-  <link rel="stylesheet" href="styles.css?v=5">
+  <!-- ?v=6 = versión de los archivos: súbela (v=2, v=3…) cada vez que publiques cambios en CSS o JS -->
+  <link rel="stylesheet" href="styles.css?v=6">
   <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
@@ -394,15 +394,17 @@
               <span class="channel__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 1-11.8 7L4 20l1.1-4A8 8 0 1 1 20 12z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 .8c-.9-.4-1.6-1.1-2-2l.8-1-1-2L9 9.5z"/></svg></span>
               <div class="channel__body">
                 <h3 class="channel__title">WhatsApp</h3>
-                <!-- script.js reemplaza este aviso por un botón si hay un número configurado -->
-                <p class="channel__pending">Pendiente de configurar</p>
+                <!-- Enlace real escrito en el HTML: funciona aunque JavaScript no se ejecute.
+                     Si cambias el número, cámbialo AQUÍ y en CONFIG.whatsappNumber (script.js). -->
+                <a class="channel__link" data-contact="whatsapp" href="https://wa.me/593991849364?text=Hola%2C%20vi%20tu%20portafolio%20y%20quisiera%20informaci%C3%B3n%20sobre%20una%20p%C3%A1gina%20web." target="_blank" rel="noopener noreferrer">Escribirme por WhatsApp<span class="sr-only"> (se abre en una pestaña nueva)</span></a>
               </div>
             </li>
             <li class="channel" id="channelEmail">
               <span class="channel__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
               <div class="channel__body">
                 <h3 class="channel__title">Correo electrónico</h3>
-                <p class="channel__pending">Pendiente de configurar</p>
+                <!-- Si cambias el correo, cámbialo AQUÍ y en CONFIG.email (script.js). -->
+                <a class="channel__link" data-contact="email" href="mailto:celijhair16@gmail.com?subject=Consulta%20sobre%20una%20p%C3%A1gina%20web">celijhair16@gmail.com<span class="sr-only"> (abre tu programa de correo)</span></a>
               </div>
             </li>
             <li class="channel">
@@ -443,6 +445,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=4" defer></script>
+  <script src="script.js?v=6" defer></script>
 </body>
 </html>
