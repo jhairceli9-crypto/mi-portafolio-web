@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- El nombre del portafolio se cambia en script.js (CONFIG.brandName); este título es el valor por defecto -->
+  <title>Mi Portafolio Web | Páginas web para negocios y emprendedores</title>
+  <meta name="description" content="Desarrollador web en formación: páginas informativas, menús digitales y catálogos modernos, rápidos y adaptados a celulares. Mira mis proyectos.">
+  <meta name="theme-color" content="#0B1120">
+  <meta name="color-scheme" content="dark">
+
+  <!-- Vista previa al compartir el enlace (WhatsApp, redes) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mi Portafolio Web — Páginas web para negocios">
+  <meta property="og:description" content="Sitios modernos, rápidos y adaptados a celulares. Mira mis proyectos de práctica.">
+  <!-- og:image: agrégala cuando el sitio esté publicado, con la dirección COMPLETA (ver README) -->
+  <meta property="og:locale" content="es_EC">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232563EB'/%3E%3Cpath d='M12 11l-5 5 5 5M20 11l5 5-5 5' fill='none' stroke='%23fff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+  <!-- Una sola fuente variable (Manrope): una descarga para todos los pesos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&display=swap" rel="stylesheet">
+
+  <!-- ?v=1 = versión de los archivos: súbela (v=2, v=3…) cada vez que publiques cambios en CSS o JS -->
+  <link rel="stylesheet" href="styles.css?v=1">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- ===== Encabezado ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo" aria-label="Ir al inicio">
+        <span class="logo__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5"/></svg>
+        </span>
+        <span class="logo__text" data-brand>Mi Portafolio Web</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="nav" aria-label="Principal">
+        <ul class="nav__list">
+          <li><a href="#sobre-mi" class="nav__link">Sobre mí</a></li>
+          <li><a href="#servicios" class="nav__link">Servicios</a></li>
+          <li><a href="#proyectos" class="nav__link">Proyectos</a></li>
+          <li><a href="#proceso" class="nav__link">Proceso</a></li>
+          <li><a href="#contacto" class="nav__link">Contacto</a></li>
+        </ul>
+        <a href="#contacto" class="btn btn--primary btn--sm nav__cta">Solicitar información</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" tabindex="-1">
+
+    <!-- ===== 1. INICIO ===== -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="badge reveal"><span class="badge__dot" aria-hidden="true"></span>Desarrollador web en formación</p>
+          <h1 class="hero__title reveal" id="hero-title">Diseño páginas web que ayudan a <span class="accent">presentar tu negocio</span> en Internet</h1>
+          <p class="hero__text reveal">Creo sitios modernos, rápidos y adaptados a celulares para negocios y emprendedores.</p>
+          <div class="hero__actions reveal">
+            <a href="#proyectos" class="btn btn--primary btn--lg">Ver mis proyectos
+              <svg class="btn__icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4"/></svg>
+            </a>
+            <a href="#contacto" class="btn btn--ghost btn--lg">Solicitar información</a>
+          </div>
+        </div>
+
+        <!-- Vista previa decorativa de los proyectos (las capturas reales también están en "Proyectos") -->
+        <div class="hero__visual reveal" aria-hidden="true">
+          <div class="shot shot--back">
+            <div class="shot__bar"><i></i><i></i><i></i></div>
+            <img src="img/novatech-480.webp" width="480" height="300" alt="" decoding="async">
+          </div>
+          <div class="shot shot--front">
+            <div class="shot__bar"><i></i><i></i><i></i></div>
+            <img src="img/sabor-y-brasa-480.webp" width="480" height="300" alt="" fetchpriority="high" decoding="async">
+          </div>
+          <div class="shot shot--side">
+            <div class="shot__bar"><i></i><i></i><i></i></div>
+            <img src="img/botiquin-480.webp" width="480" height="300" alt="" decoding="async">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 2. SOBRE MÍ ===== -->
+    <section class="section" id="sobre-mi" aria-labelledby="sobre-title">
+      <div class="container about">
+        <div class="about__text">
+          <p class="eyebrow reveal">Sobre mí</p>
+          <h2 class="section__title reveal" id="sobre-title">Aprendo construyendo <span class="accent">proyectos reales de práctica</span></h2>
+          <p class="reveal">Soy un desarrollador web en formación. Creo páginas para pequeños negocios y emprendedores que quieren una presencia clara en Internet: que se vea bien en el celular, cargue rápido y sea fácil de usar.</p>
+          <p class="reveal">Cada proyecto de este portafolio lo hice para practicar y mejorar. Prefiero ser transparente: todavía estoy aprendiendo, y por eso explico con claridad lo que puedo hacer hoy y lo que aún no.</p>
+        </div>
+
+        <div class="skills reveal">
+          <h3 class="skills__title">Lo que ya practico en mis proyectos</h3>
+          <ul class="skills__list">
+            <li><strong>HTML semántico</strong><span>Estructura clara y ordenada para buscadores y lectores de pantalla.</span></li>
+            <li><strong>CSS responsive</strong><span>Diseños que se adaptan a celulares, tablets y computadoras.</span></li>
+            <li><strong>JavaScript</strong><span>Menús móviles, filtros, galerías y validación de formularios.</span></li>
+            <li><strong>Accesibilidad básica</strong><span>Navegación con teclado, contraste de colores y textos alternativos.</span></li>
+            <li><strong>Git y publicación</strong><span>Control de versiones con GitHub y publicación en GitHub Pages y Netlify.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. SERVICIOS ===== -->
+    <section class="section section--alt" id="servicios" aria-labelledby="servicios-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Servicios</p>
+          <h2 class="section__title" id="servicios-title">¿En qué te puedo ayudar?</h2>
+          <p class="section__text">Servicios pensados para negocios que necesitan una página clara, moderna y fácil de visitar desde el celular.</p>
+        </header>
+
+        <div class="cards">
+          <article class="card reveal">
+            <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 13h8M8 16h5"/></svg></span>
+            <h3 class="card__title">Páginas web informativas</h3>
+            <p>Una página para presentar tu negocio: quién eres, qué ofreces, horarios y cómo contactarte.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3v8a3 3 0 0 0 3 3v7M7 3v5M10 3v5M13 3v5"/><path d="M17 3c-1.7 1.5-2.5 3.5-2.5 6s1 3 2.5 3v9"/></svg></span>
+            <h3 class="card__title">Páginas para restaurantes y menús digitales</h3>
+            <p>Menú con fotos, precios y categorías, más horarios y un botón para hacer consultas por WhatsApp.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>
+            <h3 class="card__title">Catálogos web para negocios</h3>
+            <p>Productos organizados por categorías, con buscador y fotos, para que tus clientes vean lo que ofreces.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4 2.5-2.5z"/></svg></span>
+            <h3 class="card__title">Actualización y mantenimiento básico</h3>
+            <p>Cambiar textos, fotos, precios u horarios de una página existente y revisar que se vea bien en celulares.</p>
+          </article>
+        </div>
+
+        <p class="honest-note reveal">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
+          <span><strong>Para ser claro:</strong> por ahora no desarrollo tiendas con pagos en línea, sistemas con base de datos ni áreas con usuario y contraseña.</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== 4. PROYECTOS =====
+         Para agregar un proyecto: copia un <article class="project"> completo,
+         pon su captura en img/ (800 y 480 px de ancho, formato .webp) y cambia textos y enlaces. -->
+    <section class="section" id="proyectos" aria-labelledby="proyectos-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Proyectos</p>
+          <h2 class="section__title" id="proyectos-title">Proyectos de práctica publicados</h2>
+          <p class="section__text">Tres sitios reales que puedes abrir y probar. Las capturas son de las páginas publicadas.</p>
+        </header>
+
+        <div class="projects">
+          <!-- NovaTech Solutions -->
+          <article class="project reveal">
+            <figure class="project__media">
+              <img src="img/novatech-800.webp" srcset="img/novatech-480.webp 480w, img/novatech-800.webp 800w"
+                   sizes="(max-width: 700px) 92vw, (max-width: 1100px) 46vw, 370px" width="800" height="500"
+                   alt="Captura de la página de inicio de NovaTech Solutions" loading="lazy" decoding="async">
+            </figure>
+            <div class="project__body">
+              <span class="tag">Demostración</span>
+              <h3 class="project__title">NovaTech Solutions</h3>
+              <p class="project__text">Proyecto demostrativo de presentación de servicios tecnológicos para una empresa ficticia.</p>
+              <ul class="project__features">
+                <li>Menú móvil accesible con teclado</li>
+                <li>Sección de proyectos con filtros</li>
+                <li>Formulario demostrativo con validación</li>
+              </ul>
+              <ul class="chips" aria-label="Tecnologías">
+                <li>HTML</li><li>CSS</li><li>JavaScript</li><li>GitHub Pages</li>
+              </ul>
+              <div class="project__actions">
+                <a class="btn btn--primary btn--sm" href="https://jhairceli9-crypto.github.io/novatech-solutions/" target="_blank" rel="noopener">Ver proyecto<span class="sr-only">: NovaTech Solutions (se abre en una pestaña nueva)</span></a>
+                <a class="btn btn--ghost btn--sm" href="https://github.com/jhairceli9-crypto/novatech-solutions" target="_blank" rel="noopener">Código<span class="sr-only"> de NovaTech Solutions en GitHub (se abre en una pestaña nueva)</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Sabor & Brasa -->
+          <article class="project reveal">
+            <figure class="project__media">
+              <img src="img/sabor-y-brasa-800.webp" srcset="img/sabor-y-brasa-480.webp 480w, img/sabor-y-brasa-800.webp 800w"
+                   sizes="(max-width: 700px) 92vw, (max-width: 1100px) 46vw, 370px" width="800" height="500"
+                   alt="Captura de la página de inicio de Sabor &amp; Brasa" loading="lazy" decoding="async">
+            </figure>
+            <div class="project__body">
+              <span class="tag">Demostración</span>
+              <h3 class="project__title">Sabor &amp; Brasa</h3>
+              <p class="project__text">Restaurante ficticio con menú digital, galería y contacto demostrativo.</p>
+              <ul class="project__features">
+                <li>Menú digital con filtros por categoría</li>
+                <li>Galería con visor usable con teclado</li>
+                <li>Consulta por WhatsApp configurable</li>
+              </ul>
+              <ul class="chips" aria-label="Tecnologías">
+                <li>HTML</li><li>CSS</li><li>JavaScript</li><li>GitHub Pages</li>
+              </ul>
+              <div class="project__actions">
+                <a class="btn btn--primary btn--sm" href="https://jhairceli9-crypto.github.io/sabor-y-brasa/" target="_blank" rel="noopener">Ver proyecto<span class="sr-only">: Sabor &amp; Brasa (se abre en una pestaña nueva)</span></a>
+                <a class="btn btn--ghost btn--sm" href="https://github.com/jhairceli9-crypto/sabor-y-brasa" target="_blank" rel="noopener">Código<span class="sr-only"> de Sabor &amp; Brasa en GitHub (se abre en una pestaña nueva)</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Botiquín del Barrio -->
+          <article class="project reveal">
+            <figure class="project__media">
+              <img src="img/botiquin-800.webp" srcset="img/botiquin-480.webp 480w, img/botiquin-800.webp 800w"
+                   sizes="(max-width: 700px) 92vw, (max-width: 1100px) 46vw, 370px" width="800" height="500"
+                   alt="Captura de la página de inicio de Botiquín del Barrio" loading="lazy" decoding="async">
+            </figure>
+            <div class="project__body">
+              <span class="tag">Diseño y desarrollo</span>
+              <h3 class="project__title">Botiquín del Barrio</h3>
+              <p class="project__text">Proyecto de interfaz web de farmacia con catálogo y navegación. Se presenta como trabajo de diseño y desarrollo web.</p>
+              <ul class="project__features">
+                <li>Catálogo con buscador y categorías</li>
+                <li>Diseño adaptado a celulares</li>
+                <li>Modo claro y oscuro</li>
+              </ul>
+              <ul class="chips" aria-label="Tecnologías">
+                <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Netlify</li>
+              </ul>
+              <div class="project__actions">
+                <a class="btn btn--primary btn--sm" href="https://botiquin-del-barrio.netlify.app/" target="_blank" rel="noopener">Ver proyecto<span class="sr-only">: Botiquín del Barrio (se abre en una pestaña nueva)</span></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. PROCESO DE TRABAJO ===== -->
+    <section class="section section--alt" id="proceso" aria-labelledby="proceso-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Proceso de trabajo</p>
+          <h2 class="section__title" id="proceso-title">Cuatro pasos, sin complicaciones</h2>
+        </header>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step__num" aria-hidden="true">1</span>
+            <h3 class="step__title">Conocer las necesidades</h3>
+            <p>Conversamos sobre tu negocio, tus clientes y lo que quieres mostrar en la página.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num" aria-hidden="true">2</span>
+            <h3 class="step__title">Preparar una propuesta</h3>
+            <p>Te explico qué secciones tendrá la página, qué necesito de ti (textos y fotos) y los tiempos.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num" aria-hidden="true">3</span>
+            <h3 class="step__title">Diseñar y desarrollar</h3>
+            <p>Construyo la página y te muestro avances para que puedas opinar y pedir cambios.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num" aria-hidden="true">4</span>
+            <h3 class="step__title">Revisar y entregar</h3>
+            <p>Probamos juntos en celular y computadora, ajustamos detalles y la publico en Internet.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== 6. CONTACTO =====
+         Los datos de contacto se configuran en script.js (CONFIG). Si faltan, se muestran como pendientes. -->
+    <section class="section" id="contacto" aria-labelledby="contacto-title">
+      <div class="container">
+        <div class="contact reveal">
+          <div class="contact__intro">
+            <p class="eyebrow">Contacto</p>
+            <h2 class="section__title" id="contacto-title">¿Tienes un negocio y quieres tu página web?</h2>
+            <p>Escríbeme y cuéntame qué necesitas. Te responderé con una propuesta clara y sin compromiso.</p>
+          </div>
+
+          <ul class="channels">
+            <li class="channel" id="channelWhatsApp">
+              <span class="channel__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 1-11.8 7L4 20l1.1-4A8 8 0 1 1 20 12z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 .8c-.9-.4-1.6-1.1-2-2l.8-1-1-2L9 9.5z"/></svg></span>
+              <div class="channel__body">
+                <h3 class="channel__title">WhatsApp</h3>
+                <!-- script.js reemplaza este aviso por un botón si hay un número configurado -->
+                <p class="channel__pending">Pendiente de configurar</p>
+              </div>
+            </li>
+            <li class="channel" id="channelEmail">
+              <span class="channel__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+              <div class="channel__body">
+                <h3 class="channel__title">Correo electrónico</h3>
+                <p class="channel__pending">Pendiente de configurar</p>
+              </div>
+            </li>
+            <li class="channel">
+              <span class="channel__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 19c-4 1.3-4-2-6-2.5M15 21v-3.4a3 3 0 0 0-.8-2.3c2.7-.3 5.6-1.3 5.6-6a4.6 4.6 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1-.3-3.4 1.3a11.6 11.6 0 0 0-6 0C6.6 2.6 5.6 2.9 5.6 2.9a4.3 4.3 0 0 0-.1 3.2A4.6 4.6 0 0 0 4.2 9.3c0 4.6 2.8 5.6 5.5 6a3 3 0 0 0-.8 2.2V21"/></svg></span>
+              <div class="channel__body">
+                <h3 class="channel__title">GitHub</h3>
+                <a class="channel__link" data-github href="https://github.com/jhairceli9-crypto" target="_blank" rel="noopener">Ver mi código<span class="sr-only"> en GitHub (se abre en una pestaña nueva)</span> <span aria-hidden="true">↗</span></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== 7. PIE DE PÁGINA ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#inicio" class="logo" aria-label="Ir al inicio">
+          <span class="logo__mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5"/></svg></span>
+          <span class="logo__text" data-brand>Mi Portafolio Web</span>
+        </a>
+        <p>Portafolio personal de un desarrollador web en formación. Los proyectos mostrados son de práctica y demostración.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Pie de página">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#contacto">Contacto</a>
+        <a data-github href="https://github.com/jhairceli9-crypto" target="_blank" rel="noopener">GitHub<span class="sr-only"> (se abre en una pestaña nueva)</span> <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+    <div class="container footer__bottom">
+      <p>© <span id="year">2026</span> <span data-brand>Mi Portafolio Web</span> · Hecho con HTML, CSS y JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="script.js?v=1" defer></script>
+</body>
+</html>
