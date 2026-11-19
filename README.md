@@ -1,5 +1,7 @@
 # Portafolio web — Jhair Ivan Celi
 
+🔗 **Sitio:** https://jhairceli9-crypto.github.io/mi-portafolio-web/
+
 Portafolio personal de un desarrollador web en formación. Muestra proyectos reales de práctica para conseguir los primeros clientes: páginas informativas, menús digitales y catálogos web.
 
 > El nombre comercial («Jhair Ivan Celi»), el WhatsApp y el correo son **configurables**. No se inventan datos personales, testimonios, clientes ni estadísticas.
@@ -81,12 +83,7 @@ En Chrome: `F12` → `Ctrl + Shift + M` para ver el formato de celular.
 
 1. Crea un repositorio (por ejemplo `mi-portafolio-web`) y sube los archivos.
 2. En GitHub: **Settings → Pages → Branch: main / (root)**.
-3. **Vista previa al compartir:** cuando tengas la dirección final, agrega en `index.html`:
-   ```html
-   <meta property="og:image" content="https://TU-USUARIO.github.io/mi-portafolio-web/img/sabor-y-brasa-800.webp">
-   <link rel="canonical" href="https://TU-USUARIO.github.io/mi-portafolio-web/">
-   ```
-   (Deben ser direcciones completas; por eso no se incluyeron todavía).
+3. **Vista previa al compartir:** `og:image`, `og:url` y `canonical` ya apuntan a `https://jhairceli9-crypto.github.io/mi-portafolio-web/`. Si cambias el nombre del repositorio, actualiza esas tres líneas en `index.html`.
 4. Cada vez que cambies `styles.css` o `script.js`, sube la versión en `index.html` (`?v=4` → `?v=5`).
 
 ## Calidad comprobada
