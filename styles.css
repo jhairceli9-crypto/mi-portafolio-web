@@ -246,6 +246,8 @@ strong { color: var(--white); }
 .cta-band__title { font-size: clamp(1.45rem, 1.4vw + 1rem, 2rem); margin-bottom: .4rem; }
 .cta-band__box p { color: #DBEAFE; }
 .cta-band__actions { display: flex; flex-wrap: wrap; gap: .8rem; flex: none; }
+/* Sobre el fondo azul, el contorno de foco es blanco (6,7:1) en vez de celeste (3,1:1) */
+.cta-band :focus-visible { outline-color: var(--white); }
 .btn--light { background: var(--white); color: #1E3A8A; }
 .btn--light:hover { background: #E0F2FE; transform: translateY(-2px); }
 .btn--outline-light { border-color: rgba(255, 255, 255, .7); color: var(--white); }
