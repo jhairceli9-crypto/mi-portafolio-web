@@ -113,7 +113,7 @@ En Chrome: `F12` → `Ctrl + Shift + M` para ver el formato de celular.
 1. Crea un repositorio (por ejemplo `mi-portafolio-web`) y sube los archivos.
 2. En GitHub: **Settings → Pages → Branch: main / (root)**.
 3. **Vista previa al compartir:** `og:image`, `og:url` y `canonical` ya apuntan a `https://jhairceli9-crypto.github.io/mi-portafolio-web/`. Si cambias el nombre del repositorio, actualiza esas tres líneas en `index.html`.
-4. Cada vez que cambies `styles.css` o `script.js`, sube la versión en `index.html` (`?v=9` → `?v=10`).
+4. Cada vez que cambies `styles.css` o `script.js`, sube la versión en `index.html` (`?v=10` → `?v=11`).
 
 ## Calidad comprobada
 
