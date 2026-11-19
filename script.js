@@ -12,7 +12,7 @@
    Mientras whatsappNumber o email estén vacíos, la web muestra "Pendiente de configurar"
    y NO crea enlaces falsos ni simula mensajes enviados. */
 const CONFIG = {
-  brandName: "Mi Portafolio Web",
+  brandName: "Jhair Ivan Celi",
   whatsappNumber: "",
   email: "",
   githubUser: "jhairceli9-crypto",
@@ -53,7 +53,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const applyBrand = () => {
     const name = CONFIG.brandName.trim() || "Mi Portafolio Web";
     document.querySelectorAll("[data-brand]").forEach((node) => { node.textContent = name; });
-    document.title = document.title.replace("Mi Portafolio Web", name);
+    // El título de la pestaña es "Nombre | Páginas web…": se reemplaza solo la parte del nombre
+    document.title = `${name} | ${document.title.split(" | ").slice(1).join(" | ")}`;
   };
   applyBrand();
 
@@ -67,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const pending = body.querySelector(".channel__pending");
     const link = el("a", "channel__link", label);
     link.href = href;
-    if (href.startsWith("https://")) { link.target = "_blank"; link.rel = "noopener"; }
+    if (href.startsWith("https://")) { link.target = "_blank"; link.rel = "noopener noreferrer"; }
     link.append(el("span", "sr-only", srText));
     pending.replaceWith(link);
   };

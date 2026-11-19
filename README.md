@@ -1,8 +1,8 @@
-# Mi Portafolio Web
+# Portafolio web — Jhair Ivan Celi
 
 Portafolio personal de un desarrollador web en formación. Muestra proyectos reales de práctica para conseguir los primeros clientes: páginas informativas, menús digitales y catálogos web.
 
-> El nombre comercial («Mi Portafolio Web»), el WhatsApp y el correo son **configurables**. No se inventan datos personales, testimonios, clientes ni estadísticas.
+> El nombre comercial («Jhair Ivan Celi»), el WhatsApp y el correo son **configurables**. No se inventan datos personales, testimonios, clientes ni estadísticas.
 
 ## Secciones
 
@@ -22,7 +22,7 @@ Portafolio personal de un desarrollador web en formación. Muestra proyectos rea
 ├── index.html   → estructura y textos de todas las secciones
 ├── styles.css   → diseño: colores, tipografía, tarjetas, animaciones y responsive
 ├── script.js    → configuración (nombre y contacto), menú móvil, enlace activo y animaciones
-├── img/         → capturas reales de los proyectos en .webp (800 y 480 px)
+├── img/         → capturas reales de los proyectos en .webp: escritorio (800 y 480 px) y celular (-movil, 300 px)
 ├── README.md    → este archivo
 └── .nojekyll    → indica a GitHub Pages que publique los archivos tal cual
 ```
@@ -31,7 +31,7 @@ Portafolio personal de un desarrollador web en formación. Muestra proyectos rea
 
 ```js
 const CONFIG = {
-  brandName: "Mi Portafolio Web",   // nombre comercial: logo, pie y título de la pestaña
+  brandName: "Jhair Ivan Celi",     // nombre comercial: logo, pie y título de la pestaña
   whatsappNumber: "",               // tu número real, con código de país (8 a 15 dígitos)
   email: "",                        // tu correo real
   githubUser: "jhairceli9-crypto",  // tu usuario de GitHub
@@ -51,10 +51,17 @@ El número se puede escribir con `+`, espacios o guiones. Los datos inválidos g
 
 - **Textos:** directamente en `index.html`; cada sección tiene un comentario `===== N. NOMBRE =====`.
 - **Colores:** variables al inicio de `styles.css` (`--bg`, `--blue`, `--sky`…). Junto a cada una está su uso.
-- **Agregar un proyecto:**
-  1. Toma una captura de la página (1280 × 800) y guárdala en `img/` en dos tamaños: `nombre-800.webp` y `nombre-480.webp`.
-  2. Copia un bloque `<article class="project">` completo en `index.html`.
-  3. Cambia la imagen, el `alt` («Captura de la página de inicio de…»), el título, la descripción, las funciones, las tecnologías y los enlaces.
+- **Agregar un proyecto** (cada tarjeta lleva 3 capturas reales):
+  1. **Captura de escritorio:** abre el sitio en Chrome con la ventana en 1280 × 800 y toma la captura (`F12` → `Ctrl + Shift + P` → «Capture screenshot»).
+  2. **Captura de celular:** en `F12` → `Ctrl + Shift + M`, elige un ancho de 390 px y repite «Capture screenshot».
+  3. Convierte a WebP (por ejemplo en [squoosh.app](https://squoosh.app), calidad 70–75) y guarda en `img/`:
+     - `nombre-800.webp` (800 px de ancho) y `nombre-480.webp` (480 px), proporción 8:5.
+     - `nombre-movil.webp` (300 px de ancho).
+  4. Copia un bloque `<article class="project">` completo en `index.html` y cambia:
+     las 3 imágenes y sus `alt` («Captura de la página de inicio de…» / «…de la versión para celular de…»),
+     la etiqueta (`Demostración · …`), el título, la descripción, las funciones, las tecnologías y los enlaces.
+  5. Los enlaces externos deben llevar `target="_blank" rel="noopener noreferrer"` y el aviso oculto «(se abre en una pestaña nueva)».
+  6. No hace falta recortar exacto: el marco obliga a todas las capturas a la proporción 8:5.
 - **Quitar un proyecto:** borra su bloque `<article class="project">`.
 
 ## Cómo probarlo
@@ -76,7 +83,7 @@ En Chrome: `F12` → `Ctrl + Shift + M` para ver el formato de celular.
    <link rel="canonical" href="https://TU-USUARIO.github.io/mi-portafolio-web/">
    ```
    (Deben ser direcciones completas; por eso no se incluyeron todavía).
-4. Cada vez que cambies `styles.css` o `script.js`, sube la versión en `index.html` (`?v=1` → `?v=2`).
+4. Cada vez que cambies `styles.css` o `script.js`, sube la versión en `index.html` (`?v=3` → `?v=4`).
 
 ## Calidad comprobada
 
@@ -88,7 +95,7 @@ Probado en Chrome de escritorio, con anchos simulados y servido en una subruta c
 - Menú móvil: el foco entra al menú, se mantiene dentro y se cierra con `Esc`; bloqueado con `inert` cuando está cerrado.
 - Contacto: sin datos no hay enlaces falsos; con datos válidos se crean los enlaces correctos (probado con valores de prueba en memoria, no guardados).
 - Respeta «reducir movimiento». Sin errores en la consola. No usa cookies ni `localStorage`.
-- 6 imágenes WebP, en total unos 105 KB.
+- 9 imágenes WebP (escritorio y celular), en total unos 155 KB. Todas las capturas mantienen la proporción 8:5.
 
 ## Limitaciones
 
