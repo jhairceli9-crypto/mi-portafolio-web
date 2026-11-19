@@ -13,7 +13,7 @@ Portafolio personal de un desarrollador web en formación. Muestra proyectos rea
 | Inicio | «Transformo ideas en páginas web profesionales», botones «Ver mis proyectos» y «Solicitar cotización», captura real enmarcada y decoración geométrica con CSS. |
 | Servicios | Páginas web informativas, páginas para restaurantes, catálogos digitales y mantenimiento web básico (botón «Consultar» → WhatsApp). |
 | Proyectos | NovaTech Solutions, Sabor & Brasa y Botiquín del Barrio en tarjetas grandes estilo navegador, marcados como **demostración**. |
-| Precios | Precios de lanzamiento: Básico $25, Emprendedor $45 (recomendado) y Catálogo $70, con «Solicitar cotización» → WhatsApp y aclaraciones. |
+| Precios | Precios de lanzamiento: Básico $25, Emprendedor $35 (recomendado) y Catálogo $50, con «Solicitar cotización» → WhatsApp y aclaraciones. |
 | Proceso | Línea de tiempo de 5 pasos: consulta, propuesta, desarrollo, revisión y entrega. |
 | Sobre mí | Presentación honesta y habilidades que se practican en los proyectos. |
 | Preguntas frecuentes | Plazos, cambios (rondas por plan), publicación, contenidos, actualizaciones y precio. |
