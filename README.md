@@ -14,9 +14,9 @@ Portafolio personal de un desarrollador web en formación. Muestra proyectos rea
 | Sobre mí | Presentación honesta como desarrollador en formación y habilidades que ya se practican en los proyectos. |
 | Servicios | 4 servicios (web informativa, menú digital, catálogo y mantenimiento) con beneficios y botón «Consultar este servicio», más una nota de lo que **todavía no** se ofrece y de que una web no garantiza ventas. |
 | Proyectos | NovaTech Solutions, Sabor & Brasa y Botiquín del Barrio, con captura real, descripción, funciones, tecnologías verificadas y botón «Ver proyecto». |
-| Llamada a la acción | Banda «¿Te gustaría una página así para tu negocio?» con botón de WhatsApp. |
-| Cómo trabajamos | 4 pasos: conocer el negocio, propuesta, desarrollo y publicación. |
-| Preguntas frecuentes | Plazos, cambios, publicación, qué tener listo, actualizaciones y precio (sin cifras inventadas). |
+| Planes | Básico $25, Emprendedor $45 y Catálogo $70 (USD, precios de referencia), con botón «Elegir…» que abre WhatsApp con el nombre del plan. |
+| Proceso de trabajo | 4 pasos: conocer el negocio, propuesta, desarrollo y publicación. |
+| Preguntas frecuentes | Plazos, cambios, publicación, qué tener listo, actualizaciones y precio (remite a los planes). |
 | Contacto | WhatsApp y correo configurados, enlace a GitHub y botón flotante de WhatsApp. |
 | Pie | Navegación, GitHub y aviso de portafolio personal. |
 
@@ -57,6 +57,27 @@ Si cambias tu número o correo, **cámbialo en los dos**. Si no coinciden, la co
 
 El número se puede escribir con `+`, espacios o guiones. **Formato de Ecuador:** 593 + el número sin el 0 inicial (099… → 59399…). Los datos inválidos generan un aviso en la consola (`F12`).
 
+## Estilo visual
+
+Tech premium minimalista: fondos sólidos, bordes finos y sombras neutras; un único degradado suave en la parte alta de la portada. Fuente **Inter**.
+
+| Variable en `styles.css` | Color | Uso |
+|---|---|---|
+| `--bg` | `#0B1120` | Fondo principal |
+| `--surface` | `#151E2E` | Tarjetas |
+| `--accent` | `#3B82F6` | Acento y botones (texto `#0B1120` encima: 5,12:1; el blanco solo daría 3,68:1) |
+| `--text` | `#F1F5F9` | Texto principal |
+| `--muted` | `#94A3B8` | Texto secundario |
+| `--border` | `rgba(148,163,184,.15)` | Bordes |
+
+## Planes
+
+En `index.html`, sección `===== 5. PLANES =====`: cada plan es un `<article class="plan">`.
+- **Precio:** cambia el número dentro de `<span class="plan__amount">`.
+- **Qué incluye:** edita la lista `<ul class="plan__list">`.
+- **Botón:** `data-plan="…"` es el nombre que aparece en el mensaje de WhatsApp.
+- El plan destacado lleva la clase `plan--featured` (solo cambia el borde).
+
 ## Cómo editar el contenido
 
 - **Textos:** directamente en `index.html`; cada sección tiene un comentario `===== N. NOMBRE =====`.
@@ -90,7 +111,7 @@ En Chrome: `F12` → `Ctrl + Shift + M` para ver el formato de celular.
 1. Crea un repositorio (por ejemplo `mi-portafolio-web`) y sube los archivos.
 2. En GitHub: **Settings → Pages → Branch: main / (root)**.
 3. **Vista previa al compartir:** `og:image`, `og:url` y `canonical` ya apuntan a `https://jhairceli9-crypto.github.io/mi-portafolio-web/`. Si cambias el nombre del repositorio, actualiza esas tres líneas en `index.html`.
-4. Cada vez que cambies `styles.css` o `script.js`, sube la versión en `index.html` (`?v=6` → `?v=7`).
+4. Cada vez que cambies `styles.css` o `script.js`, sube la versión en `index.html` (`?v=7` → `?v=8`).
 
 ## Calidad comprobada
 

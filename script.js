@@ -109,6 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
    * Botones de llamada a la acción:
    * - [data-service] → "Consultar este servicio": WhatsApp con el nombre del servicio ya escrito.
    * - [data-wa]      → botón general "Escribirme por WhatsApp".
+   * - [data-plan]    → botones "Elegir …" de los planes.
    * Sin número válido, se quedan como enlaces a la sección #contacto (nunca a un WhatsApp falso).
    */
   const waLink = (text) => `https://wa.me/${wa}?text=${encodeURIComponent(text)}`;
@@ -122,6 +123,9 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("[data-service]").forEach((a) =>
       makeWhatsApp(a, `Hola, vi tu portafolio y me interesa el servicio de ${a.dataset.service}.`));
     document.querySelectorAll("[data-wa]").forEach((a) => makeWhatsApp(a, CONFIG.whatsappMessage));
+    // Botones de los planes: "Hola, … me interesa el plan Emprendedor."
+    document.querySelectorAll("[data-plan]").forEach((a) =>
+      makeWhatsApp(a, `Hola, vi tu portafolio y me interesa el plan ${a.dataset.plan}.`));
 
     // Botón flotante de WhatsApp (solo existe si hay número)
     const float = el("a", "wa-float");

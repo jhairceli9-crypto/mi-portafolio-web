@@ -22,13 +22,13 @@
 
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232563EB'/%3E%3Cpath d='M12 11l-5 5 5 5M20 11l5 5-5 5' fill='none' stroke='%23fff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 
-  <!-- Una sola fuente variable (Manrope): una descarga para todos los pesos -->
+  <!-- Una sola fuente variable (Inter): una descarga para todos los pesos -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&display=swap" rel="stylesheet">
 
-  <!-- ?v=6 = versión de los archivos: súbela (v=2, v=3…) cada vez que publiques cambios en CSS o JS -->
-  <link rel="stylesheet" href="styles.css?v=6">
+  <!-- ?v=7 = versión de los archivos: súbela (v=2, v=3…) cada vez que publiques cambios en CSS o JS -->
+  <link rel="stylesheet" href="styles.css?v=7">
   <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
@@ -50,10 +50,10 @@
 
       <nav class="nav" id="nav" aria-label="Principal">
         <ul class="nav__list">
-          <li><a href="#sobre-mi" class="nav__link">Sobre mí</a></li>
           <li><a href="#servicios" class="nav__link">Servicios</a></li>
           <li><a href="#proyectos" class="nav__link">Proyectos</a></li>
-          <li><a href="#como-trabajamos" class="nav__link">Cómo trabajamos</a></li>
+          <li><a href="#planes" class="nav__link">Planes</a></li>
+          <li><a href="#como-trabajamos" class="nav__link">Proceso</a></li>
           <li><a href="#preguntas" class="nav__link">Preguntas</a></li>
           <li><a href="#contacto" class="nav__link">Contacto</a></li>
         </ul>
@@ -80,19 +80,12 @@
           </div>
         </div>
 
-        <!-- Vista previa decorativa de los proyectos (las capturas reales también están en "Proyectos") -->
+        <!-- Captura real de un proyecto (decorativa: el detalle está en "Proyectos") -->
         <div class="hero__visual reveal" aria-hidden="true">
-          <div class="shot shot--back">
-            <div class="shot__bar"><i></i><i></i><i></i></div>
-            <img src="img/novatech-480.webp" width="480" height="300" alt="" decoding="async">
-          </div>
-          <div class="shot shot--front">
-            <div class="shot__bar"><i></i><i></i><i></i></div>
-            <img src="img/sabor-y-brasa-480.webp" width="480" height="300" alt="" fetchpriority="high" decoding="async">
-          </div>
-          <div class="shot shot--side">
-            <div class="shot__bar"><i></i><i></i><i></i></div>
-            <img src="img/botiquin-480.webp" width="480" height="300" alt="" decoding="async">
+          <div class="frame">
+            <div class="frame__bar"><i></i><i></i><i></i></div>
+            <img src="img/sabor-y-brasa-800.webp" srcset="img/sabor-y-brasa-480.webp 480w, img/sabor-y-brasa-800.webp 800w"
+                 sizes="(max-width: 900px) 92vw, 520px" width="800" height="500" alt="" fetchpriority="high" decoding="async">
           </div>
         </div>
       </div>
@@ -290,28 +283,70 @@
       </div>
     </section>
 
-    <!-- ===== Llamada a la acción ===== -->
-    <section class="cta-band" aria-labelledby="cta-title">
+    <!-- ===== 5. PLANES =====
+         Precios definidos por el dueño del portafolio. Para cambiar un precio o lo que incluye,
+         edita el bloque <article class="plan">. data-plan = nombre que aparece en el mensaje de WhatsApp. -->
+    <section class="section section--alt" id="planes" aria-labelledby="planes-title">
       <div class="container">
-        <div class="cta-band__box reveal">
-          <div>
-            <h2 class="cta-band__title" id="cta-title">¿Te gustaría una página así para tu negocio?</h2>
-            <p>Cuéntame qué necesitas y te preparo una propuesta clara, sin compromiso.</p>
-          </div>
-          <div class="cta-band__actions">
-            <a class="btn btn--light btn--lg" href="#contacto" data-wa>Escribirme por WhatsApp</a>
-            <a class="btn btn--outline-light btn--lg" href="#servicios">Ver servicios</a>
-          </div>
+        <header class="section__head reveal">
+          <p class="eyebrow">Planes</p>
+          <h2 class="section__title" id="planes-title">Planes claros para empezar</h2>
+          <p class="section__text">Precios de referencia en dólares (USD). El alcance final se confirma en la propuesta, antes de empezar.</p>
+        </header>
+
+        <div class="plans">
+          <article class="plan reveal">
+            <h3 class="plan__name">Básico</h3>
+            <p class="plan__price"><span class="plan__amount">$25</span> <span class="plan__currency">USD</span></p>
+            <p class="plan__desc">Para presentar tu negocio en una sola página.</p>
+            <ul class="plan__list" aria-label="Incluye">
+              <li>Página de una sección con tu información</li>
+              <li>Diseño adaptado a celulares</li>
+              <li>Botón directo a WhatsApp</li>
+              <li>Publicación en un servicio gratuito</li>
+            </ul>
+            <a class="btn btn--ghost btn--full" href="#contacto" data-plan="Básico">Elegir Básico</a>
+          </article>
+
+          <article class="plan plan--featured reveal">
+            <h3 class="plan__name">Emprendedor</h3>
+            <p class="plan__price"><span class="plan__amount">$45</span> <span class="plan__currency">USD</span></p>
+            <p class="plan__desc">Para mostrar más: servicios, menú digital o galería.</p>
+            <ul class="plan__list" aria-label="Incluye">
+              <li>Página con varias secciones</li>
+              <li>Menú digital o lista de servicios con precios</li>
+              <li>Galería de fotos</li>
+              <li>WhatsApp y enlace a tu ubicación</li>
+              <li>Publicación en un servicio gratuito</li>
+            </ul>
+            <a class="btn btn--primary btn--full" href="#contacto" data-plan="Emprendedor">Elegir Emprendedor</a>
+          </article>
+
+          <article class="plan reveal">
+            <h3 class="plan__name">Catálogo</h3>
+            <p class="plan__price"><span class="plan__amount">$70</span> <span class="plan__currency">USD</span></p>
+            <p class="plan__desc">Para mostrar tus productos organizados.</p>
+            <ul class="plan__list" aria-label="Incluye">
+              <li>Catálogo con categorías y buscador</li>
+              <li>Foto, descripción y precio de cada producto</li>
+              <li>Consulta por WhatsApp de cada producto</li>
+              <li>Diseño adaptado a celulares</li>
+              <li>Publicación en un servicio gratuito</li>
+            </ul>
+            <a class="btn btn--ghost btn--full" href="#contacto" data-plan="Catálogo">Elegir Catálogo</a>
+          </article>
         </div>
+
+        <p class="plans__note reveal">Los planes no incluyen dominio propio (por ejemplo, <em>tunegocio.com</em>), pagos en línea ni sistemas con base de datos. Si necesitas algo diferente, te preparo una propuesta a medida.</p>
       </div>
     </section>
 
-    <!-- ===== 5. CÓMO TRABAJAMOS ===== -->
+    <!-- ===== 6. PROCESO DE TRABAJO ===== -->
     <section class="section" id="como-trabajamos" aria-labelledby="proceso-title">
       <div class="container">
         <header class="section__head reveal">
-          <p class="eyebrow">Cómo trabajamos</p>
-          <h2 class="section__title" id="proceso-title">Cuatro pasos, sin complicaciones</h2>
+          <p class="eyebrow">Proceso de trabajo</p>
+          <h2 class="section__title" id="proceso-title">Cómo trabajamos</h2>
           <p class="section__text">Siempre sabrás en qué etapa está tu página y qué necesito de ti.</p>
         </header>
 
@@ -340,7 +375,7 @@
       </div>
     </section>
 
-    <!-- ===== 6. PREGUNTAS FRECUENTES =====
+    <!-- ===== 7. PREGUNTAS FRECUENTES =====
          Cada pregunta es un <details>: se abre y se cierra sin JavaScript y funciona con teclado. -->
     <section class="section section--alt" id="preguntas" aria-labelledby="faq-title">
       <div class="container">
@@ -372,13 +407,13 @@
           </details>
           <details class="faq__item">
             <summary>¿Cuánto cuesta?</summary>
-            <p>Depende de las secciones y funciones que necesites. Te envío una propuesta con el precio antes de empezar, sin compromiso.</p>
+            <p>Los planes van desde $25 (Básico) hasta $70 (Catálogo). Son precios de referencia: el precio final se confirma en la propuesta según el contenido que necesites, antes de empezar y sin compromiso.</p>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- ===== 7. CONTACTO =====
+    <!-- ===== 8. CONTACTO =====
          Los datos de contacto se configuran en script.js (CONFIG). Si faltan, se muestran como pendientes. -->
     <section class="section" id="contacto" aria-labelledby="contacto-title">
       <div class="container">
@@ -420,7 +455,7 @@
     </section>
   </main>
 
-  <!-- ===== 8. PIE DE PÁGINA ===== -->
+  <!-- ===== 9. PIE DE PÁGINA ===== -->
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
@@ -434,7 +469,8 @@
         <a href="#sobre-mi">Sobre mí</a>
         <a href="#servicios">Servicios</a>
         <a href="#proyectos">Proyectos</a>
-        <a href="#como-trabajamos">Cómo trabajamos</a>
+        <a href="#planes">Planes</a>
+        <a href="#como-trabajamos">Proceso</a>
         <a href="#preguntas">Preguntas frecuentes</a>
         <a href="#contacto">Contacto</a>
         <a data-github href="https://github.com/jhairceli9-crypto" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (se abre en una pestaña nueva)</span> <span aria-hidden="true">↗</span></a>
@@ -445,6 +481,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=6" defer></script>
+  <script src="script.js?v=7" defer></script>
 </body>
 </html>
